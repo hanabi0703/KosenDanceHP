@@ -27,16 +27,11 @@ li{
   list-style: none;
 }
 
-/* h2{
-  color:#2ecccf;
-  font-size: 30px;
-  border-bottom: 1px solid #2ecccf;
-} */
 .container{
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   grid-template-rows: auto 1fr 100px;
-grid-template-areas:
+  grid-template-areas:
           "head head head"
           "main main main"
           "foot foot foot";

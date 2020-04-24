@@ -1,0 +1,69 @@
+@charset "UTF-8"
+
+header{
+  grid-area: head;
+}
+
+h1{
+  font-family: 'Sriracha', cursive;
+  color: #35B5B5;
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+  position: absolute;
+}
+
+ul{
+  margin-top: 15px;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+li{
+  margin: 20px 40px;
+  font-size: 25px;
+}
+
+nav a{
+  color: #fff;
+}
+
+.mv{
+  background: #D9482E;
+}
+
+.mv img{
+  width: 100%;
+  border-radius: 0px 0px 0px 100px;
+  vertical-align: bottom;
+}
+
+header h2{
+  text-align: center;
+}
+
+.vocaloid h2, .k-pop h2, .krump h2, .idol h2, .hiphop h2, .pop h2{
+  text-align: center;
+}
+
+main div {
+  text-align: center;
+}
+
+.vocaloid h3, .k-pop h3, .krump h3, .idol h3, .hiphop h3, .pop h3{
+  text-align: center;
+}
+
+.vocaloid p, .k-pop p, .krump p, .idol p, .hiphop p, .pop p{
+  text-align: center;
+}
+
+.comment h2{
+  text-align: center;
+}

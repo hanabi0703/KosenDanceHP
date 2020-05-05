@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* テキストの自動拡大を無効化*/
-body{
+body {
   .webkit-text-size-adjust:none;
   text-size-adjust:none;
   /* text-align: center; */
@@ -11,23 +11,24 @@ body{
 
 /*基本設定*/
 
-*{
+* {
   margin:0;
 }
 
-img{
+img {
   /* width:100%; */
   /* height:auto; */
 }
 
-a{
+a {
   text-decoration: none;
 }
-li{
+
+li {
   list-style: none;
 }
 
-.container{
+.container {
   display: grid;
   grid-template-rows: auto 1fr 100px;
   grid-template-areas:
@@ -37,16 +38,16 @@ li{
           grid-template-columns: 50px 1fr 50px;
 }
 
-header{
+header {
   grid-area: head;
 }
 
-h1{
-  color: #35B5B5;
+h1 {
+  color: #35b5b5;
   font-family: 'Sriracha', cursive;
 }
 
-.header{
+.header {
   background: rgba(0,0,0,0.5);
   display: flex;
   height: 100px;
@@ -56,33 +57,33 @@ h1{
   z-index: 10;
 }
 
-ul{
+ul {
   display: inline-flex;
   justify-content: space-around;
   margin-top: 15px;
 }
 
-li{
+li {
   margin: 20px 40px;
   font-size: 25px;
 }
 
-nav a{
+nav a {
   color: #fff;
 }
 
-.mv{
-  background: #D9482E;
+.mv {
+  background: #d9482e;
 }
 
-.mv img{
+.mv img {
   border-radius: 0px 0px 0px 100px;
   vertical-align: bottom;
   width: 100%;
 }
 
-main{
-  background: #FFF4F2;
+main {
+  background: #fff4f2;
   display: grid;
   grid-area: main;
   grid-template-columns: 150px 1fr 1fr 1fr 150px;
@@ -97,8 +98,8 @@ main{
   z-index: -1
 }
 
-.bg_color{
-  background: #D9482E;
+.bg_color {
+  background: #d9482e;
   border-radius: 0px 0px 0px 50px;
   grid-column: 1 / -1;
   grid-row: news / span 3;
@@ -106,13 +107,15 @@ main{
 }
 
 .news {
-  background: #D9482E;
+  background: #d9482e;
   grid-column: 2 / -2;
   grid-row: news;
   height: 200px;
 }
 
-.news h2, .joinus h2, .twitter h2{
+.news h2,
+.joinus h2,
+.twitter h2 {
   color:#fff;
   border-bottom: 1px solid #fff;
   font-size: 50px;
@@ -121,80 +124,79 @@ main{
 }
 
 .about {
-  background: #FFF4F2;
+  background: #fff4f2;
   border-radius: 30px;
   box-shadow: 0 0 30px -8px;
   grid-column: 2 / -2;
   grid-row: about;
 }
 
-.about h2, .genre h2{
-  border-bottom: 1px solid #D9482E;
-  color:#D9482E;
+.about h2,
+.genre h2 {
+  border-bottom: 1px solid #d9482e;
+  color:#d9482e;
   font-size: 50px;
   margin: 30px 10px 0px;
   text-align: center;
 }
 
-.about h3{
-  color:#D9482E;
+.about h3 {
+  color:#d9482e;
   font-size: 30px;
   padding-left: 30px;
 }
 
-.content1{
+.content1 {
   margin: 20px;
   /* height: 200px; */
 }
 
-.content1-1{
+.content1-1 {
   align-items: center;
   display: flex;
   justify-content: space-around;
   margin: 30px 0;
 }
 
-.content1-1 img{
+.content1-1 img {
   border-radius: 200px;
   height: 200px;
   object-fit: cover;
   width: 200px;
 }
 
-.content1-1 p{
+.content1-1 p {
   margin: 30px 0px 30px;
   padding: 0 10px 0;
   white-space: pre-wrap;
   width: 600px;
 }
 
-.content2{
+.content2 {
   height: 200px;
 }
 
-.content3{
+.content3 {
   height: 200px;
 }
 
 
-.twitter{
-  background: #D9482E;
+.twitter {
+  background: #d9482e;
   border-radius: 0px 0px 0px 100px;
   grid-column: 2 / -2;
   grid-row: twitter;
   height: 300px;
 }
 
-.genre{
+.genre {
   grid-column: 2 / -2;
   grid-row: genre;
   height: 300px;
 }
 
-
-
-.joinus{
-  background: #D9482E;
+.joinus {
+  background: #d9482e;
   border-radius: 30px;
   box-shadow: 0 0 30px -8px;
   grid-column: 2 / -2;
@@ -202,16 +204,16 @@ main{
   height: 300px;
 }
 
-.space{
+.space {
   grid-row: space;
 }
 
-footer{
-  background: black;
+footer {
+  background: #000;
   color: #fff;
   grid-area: foot;
   text-align: center;
 }
-footer p{
+footer p {
   margin: 20px;
 }

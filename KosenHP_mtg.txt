@@ -1,6 +1,3 @@
-TESTTESTTESTTESTTESTTESTTESTTESTTEST
-
-
 高専HP　mtg1
 参加者：西脇　古畑
 
@@ -8,12 +5,15 @@ TESTTESTTESTTESTTESTTESTTESTTESTTEST
 └・sourcetree		//gitのGUIアプリ
 └・comparemerge	//mergeアプリ
 └・discord		//コミュニケーションアプリ
+└・Atom		//エディター
+└・Emmet		//HTMLの入力補完機能
 
 
 
 
 〇決めるべきこと
   ・コーディング規約		→OK
+	→"https://bicepper.com/google-coding-rules/"
   ・役割分担			→OK
   ・タスクの管理		→OK
   ・期限			→OK

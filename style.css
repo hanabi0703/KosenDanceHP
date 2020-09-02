@@ -132,6 +132,10 @@ li {
   z-index:200;
 }
 
+.header_logo_img {
+  width:100%;
+}
+
 .header_twitter {
   background: rgba(0, 0, 0, .8);
   grid-column: 2 / span 2;
@@ -279,9 +283,66 @@ li {
 }
 
 .main_genre {
+  display: grid;
   grid-column: 2 / -2;
   grid-row: genre;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows:
+  [h2] 1fr
+  [p] 1fr
+  [cont]3fr;
   height: 300px;
+}
+
+.main_genre_h2 {
+  grid-column: 3;
+  grid-row: h2;
+}
+
+.main_genre_p {
+  grid-column: 3;
+  grid-row: p;
+}
+
+.main_genre_div {
+  align-items: center;
+  display: flex;
+  grid-row: cont;
+  justify-content: center;
+  /* text-align: center;  */
+   /* ↑imgの上下中央配置：flexで実現したため削除 */
+}
+
+.main_genre_img {
+  border-radius: 100px;
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.main_genre_hiphop{
+  grid-column: 1;
+}
+
+.main_genre_krump {
+  grid-column: 2;
+
+}
+
+.main_genre_vocaloid {
+  grid-column: 3;
+
+}
+
+.main_genre_idol{
+  grid-column: 4;
+
+}
+
+.main_genre_k-pop {
+  grid-column: 5;
+
 }
 
 .main_joinus {

@@ -4,15 +4,15 @@
 body {
   .webkit-text-size-adjust:none;
   text-size-adjust:none;
-  /* text-align: center; */
   font-family: 'Ubuntu', sans-serif,'M PLUS Rounded 1c', sans-serif;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /*基本設定*/
 
 * {
-  margin:0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -26,6 +26,10 @@ a {
 
 li {
   list-style: none;
+}
+
+.wrap {
+  overflow: hidden;
 }
 
 .wrap_grid {
@@ -137,24 +141,58 @@ li {
 }
 
 .header_twitter {
-  background: rgba(0, 0, 0, .8);
+  /* background: rgba(0, 0, 0, .8); */
   grid-column: 2 / span 2;
-  grid-row: mv1 / span 2;
+  grid-row: mv1 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index:200;
 }
 
-.header_insta {
+.header_twitter_h2-div {
+  display: table;
+  height: 15%;
+}
+
+.header_twitter_h2 {
+  background: rgba(0, 0, 0, .8);
+  border-radius: 6px;
+  display: table-cell;
+  color: #fff4f2;
+  text-align: center;
+  /* height: 15%; */
+  vertical-align: middle;
+  width: 100%;
+}
+
+.header_twitter_cont {
+  background: rgba(255, 255, 255, .8);
+  border-radius: 6px;
+  height: 80%;
+  width: 100%;
+}
+
+/* .header_insta {
   background: rgba(0, 255, 0, .8);
   grid-column: 2 / span 2;
   grid-row: mv4 / span 2;
   z-index:200;
+} */
+
+.header_youtube {
+  background: rgba(0, 255, 255, .8);
+  grid-column: 9 / span 3;
+  grid-row: mv4 / span 2;
+  z-index:200;
+}
+.header_youtube_h2 {
+
 }
 
-.header_news {
-  background: rgba(0, 255, 255, .8);
-  grid-column: 10 / span 2;
-  grid-row: mv2 / span 3;
-  z-index:200;
+.header_youtube_cont {
+  display: block;
+  margin: 0 0 0 auto;
 }
 
 .header_sns_link {
@@ -162,6 +200,30 @@ li {
   grid-column: 9 / span 3;
   grid-row: mv6;
   z-index:200;
+}
+
+.sns_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns_bg {
+  background: #fff4f2;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.sns_a {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.sns_logo {
+  width: 50px;
 }
 
 .header_info-1 {
@@ -212,7 +274,7 @@ li {
   background: #d9482e;
   grid-column: 2 / -2;
   grid-row: news;
-  height: 200px;
+  height: 400px;
 }
 
 .main_h2_white {
@@ -290,66 +352,100 @@ li {
   grid-template-rows:
   [h2] 1fr
   [p] 1fr
-  [cont]3fr;
-  height: 300px;
+  [cont] 2fr;
+  height: 500px;
+  row-gap: 25px;
 }
 
 .main_genre_h2 {
-  grid-column: 3;
+  grid-column: 1 / -1;
   grid-row: h2;
 }
 
 .main_genre_p1 {
-  grid-column: 3;
+  grid-column: 1 / -1;
   grid-row: p;
 }
 
-.main_genre_div {
-  align-items: center;
-  display: flex;
-  grid-row: cont;
-  justify-content: center;
-  /* text-align: center;  */
-   /* ↑imgの上下中央配置：flexで実現したため削除 */
+.main_genre_p2 {
+  /* background-color: rgba(255, 255, 255, .8);  */
+  color: #000;
+  font-size: 100%;
+  font-weight: bold;
+  mix-blend-mode:overlay;
+  position: absolute;
+  /* display: inline-block; */
 }
 
-.main_genre_div {
+
+
+/* .main_genre_img {
+  background-blend-mode:overlay;
 	border: 9px solid #fff;
   border-radius: 50%;
   height: 13vw;
 	object-fit: cover;
-	/* opacity: 0.6; */
   width: 13vw;
   vertical-align: middle;
-}
-
-.main_genre_hiphop{
-	grid-column: 1;
-
-}
+} */
 
 .main_genre_hiphop {
+  grid-column: 1;
 	background: url('img/hiphop.jpg') no-repeat center;
-	background-size: cover;
-	background-color: rgba(255, 255, 255, .8);
-	/* color: rgba(255, 255, 255, .8); */
-	font-size: 3vw;
 }
 
 .main_genre_krump {
   grid-column: 2;
+  background: url('img/krump.jpg') no-repeat center;
 }
 
 .main_genre_vocaloid {
   grid-column: 3;
+  background: url('img/vocaloid.jpg') no-repeat center;
 }
 
 .main_genre_idol{
   grid-column: 4;
+  background: url('img/idol.jpg') no-repeat center;
 }
 
 .main_genre_k-pop {
   grid-column: 5;
+  background: url('img/k-pop.jpg') no-repeat center;
+}
+
+.main_genre_div {
+  align-items: center;
+  /* text-align: center;  */
+   /* ↑imgの上下中央配置：flexで実現したため削除 */
+   background-blend-mode:overlay;
+   background-color: rgba(0, 0, 0, .2);
+   background-size: cover;
+   border: 0.5vw solid #fff;
+   border-radius: 50%;
+   display: flex;
+   grid-row: cont;
+   font-size: 3vw;
+   height: 13vw;
+   justify-content: center;
+   margin: auto;
+   position: relative;
+   width: 13vw;
+}
+
+.main_genre_div:before {
+	content: ' ';
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.main_genre_vocaloid{
+font-size: 2.2vw;
 }
 
 .main_joinus {
@@ -358,7 +454,7 @@ li {
   box-shadow: 0 20px 30px -15px;
   grid-column: 2 / -2;
   grid-row: joinus;
-  height: 300px;
+  height: 500px;
 }
 
 .main_joinus_bg-color {
@@ -389,6 +485,10 @@ li {
   background: rgba(255, 0, 255, .5);
   grid-column: 3 /span 3;
   grid-row: footer2;
+}
+
+.footer_logo_img {
+  width: 100%;
 }
 
 .footer_sns_list {

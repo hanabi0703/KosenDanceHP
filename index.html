@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>L.A.R.G.O -TOP-</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Sriracha|Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,6 +11,7 @@
     <script src="script.js"></script>
   </head>
   <body class="page_top">
+    <div class="wrap">
     <div class="wrap_grid">
       <header class="header_grid header_bg-color">
         <div class="header_header_grid">
@@ -35,23 +36,38 @@
           <img class="header_logo_img" src="img/LARGO_logo.png">
         </div>
         <section class="header_twitter">
-          <h2 class="header_twitter_h2"></h2>
-          <div class="header_twitter_cont"></div>
+          <div class="header_twitter_h2-div">
+          <h2 class="header_twitter_h2">Twitter</h2>
+          </div>
+          <div class="header_twitter_cont">
+            <a class="twitter-timeline" data-lang="ja" data-width="100%" data-height="100%" data-chrome="transparent noheader nofooter" data-dnt="true"  href="https://twitter.com/TNCT_DANCE2020?ref_src=twsrc%5Etfw">Tweets by TNCT_DANCE2020</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
         </section>
-        <section class="header_insta">
-          <h2 class="header_insta_h2"></h2>
-          <div class="header_insta_cont"></div>
-        </section>
-        <section class="header_news">
-          <h2 class="header_news_h2"></h2>
-          <div class="header_news_cont"></div>
+        <section class="header_youtube">
+          <h2 class="header_youtube_h2"></h2>
+          <div class="header_youtube_cont">
+            <iframe width="384px" height="216px" src="https://www.youtube.com/embed/PTqa6r-1oNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </section>
         <section class="header_sns_link">
-          <ul class="header_sns_list">
-            <li class="header_sns_bg"><a class="header_sns_line" href="#"></a></li>
-            <li class="header_sns_bg"><a class="header_sns_youtube" href="#"></a></li>
-            <li class="header_sns_bg"><a class="header_sns_insta" href="#"></a></li>
-            <li class="header_sns_bg"><a class="header_sns_twitter" href="#"></a></li>
+          <ul class="sns_list">
+            <li class="sns_bg">
+              <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+              <img  class=" sns_logo" src="img/Line_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+              <img  class=" sns_logo" src="img/youtube.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_insta sns_a" href="#">
+              <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+              <img  class=" sns_logo" src="img/Twitter_logo.png" alt="">
+            </a></li>
           </ul>
         </section>
         <section class="header_info-1">
@@ -95,21 +111,26 @@
         <section class="main_genre">
           <h2 class="main_h2_orange main_genre_h2">GENRE</h2>
           <p class="main_genre_p1">
+            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
             </p>
           <div class="main_genre_hiphop main_genre_div">
-						<p class="main_genre_p2">HIPHOP</p>
-						<!-- <img class="main_genre_img" src="img/hiphop.jpg" alt="HIPHOPの参考写真"> -->
+            <!-- <img class="main_genre_img" src="img/hiphop.jpg" alt="HIPHOPの参考写真"> -->
+            <p class="main_genre_p2">HIPHOP</p>
           </div>
           <div class="main_genre_krump main_genre_div">
+            <p class="main_genre_p2">KRUMP</p>
             <!-- <img class="main_genre_img" src="img/krump.jpg" alt="KRUMPの参考写真"> -->
           </div>
           <div class="main_genre_vocaloid main_genre_div">
+            <p class="main_genre_p2">VOCALOID</p>
             <!-- <img class="main_genre_img" src="img/vocaloid.jpg" alt="VOCALOIDの参考写真"> -->
           </div>
           <div class="main_genre_idol main_genre_div">
+            <p class="main_genre_p2">IDOL</p>
             <!-- <img class="main_genre_img" src="img/idol.jpg" alt="IDOLの参考写真"> -->
           </div>
           <div class="main_genre_k-pop main_genre_div">
+            <p class="main_genre_p2">K-POP</p>
             <!-- <img class="main_genre_img" src="img/k-pop.jpg" alt="K-POPの参考写真"> -->
           </div>
         </section>
@@ -124,14 +145,28 @@
       </main>
       <footer class="footer_footer">
           <div class="footer_logo">
-            <img class="footer_logo_img">
+            <img class="footer_logo_img" src="img/LARGO_logo.png">
           </div>
-            <ul class="footer_sns_list">
-              <li class="footer_sns_bg"><a class="footer_sns_line" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_youtube" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_insta" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_twitter" href="#"></a></li>
+          <div class="footer_sns_list">
+            <ul class="sns_list">
+              <li class="sns_bg">
+                <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+                <img  class=" sns_logo" src="img/Line_logo.png" alt="">
+              </a></li>
+              <li class="sns_bg">
+                <a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+                <img  class=" sns_logo" src="img/youtube.png" alt="">
+              </a></li>
+              <li class="sns_bg">
+                <a class="sns_insta sns_a" href="#">
+                <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
+              </a></li>
+              <li class="sns_bg">
+                <a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+                <img  class=" sns_logo" src="img/Twitter_logo.png" alt="">
+              </a></li>
             </ul>
+          </div>
           <nav class="footer_nav">
             <ul class="footer_nav_list">
               <li class="footer_nav_li"><a class="footer_nav_a" href="index.html">HOME</a></li>
@@ -142,6 +177,7 @@
           </nav>
         <p class="footer_footer_p">© 2020 HANABI</p>
       </footer>
+    </div>
     </div>
   </body>
 </html>

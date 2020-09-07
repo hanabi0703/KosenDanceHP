@@ -7,32 +7,32 @@
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Sriracha|Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="parallax.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body class="page_top">
-    <div class="wrap">
-    <div class="wrap_grid">
-      <header class="header_grid header_bg-color">
-        <div class="header_header_grid">
-          <section class="header_header_menu">
-          <h1 class="header_h1"><img class="header_h1_img" src="img/LARGO_logo.png"></h1>
-            <nav>
-              <ul class="header_nav_ul">
-                <li class="header_nav_li"><a class="header_nav_a" href="index.html">HOME</a></li>
-                <li class="header_nav_li"><a class="header_nav_a" href=./movie.html>MOVIE</a></li>
-                <li class="header_nav_li"><a class="header_nav_a" href=./genre.html>GENRE</a></li>
-                <li class="header_nav_li"><a class="header_nav_a" href="./contact.html">CONTACT</a></li>
-              </ul>
-            </nav>
-          </section>
-        </div>
-        <div class="header_mv">
-          <img class="header_mv_img" src="img/mv.jpg">
+    <div class="wrap_grid_top">
+      <header class="header_grid_top header_bg_top">
+        <section class="header_header_menu">
+        <h1 class="header_h1">
+          <a class="header_logo_a" href="index.html">
+            <img class="header_h1_img" src="img/LARGO_logo.png">
+          </a>
+        </h1>
+        <nav class="header_nav">
+          <ul class="header_nav_ul">
+            <li class="header_nav_li"><a class="header_nav_a" href="index.html">HOME</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href=./movie.html>MOVIE</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href=./genre.html>GENRE</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href="./contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        </section>
+        <div class="header_mv mv_top">
+          <img class="header_mv_img mv_img_top" src="img/mv.jpg">
         </div>
         <div class="header_mv_bg">
         </div>
-        <div class="header_logo">
+        <div class="header_logo header_logo_top">
           <img class="header_logo_img" src="img/LARGO_logo.png">
         </div>
         <section class="header_twitter">
@@ -47,10 +47,10 @@
         <section class="header_youtube">
           <h2 class="header_youtube_h2"></h2>
           <div class="header_youtube_cont">
-            <iframe width="384px" height="216px" src="https://www.youtube.com/embed/PTqa6r-1oNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PTqa6r-1oNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
-        <section class="header_sns_link">
+        <section class="header_sns_link header_sns_top">
           <ul class="sns_list">
             <li class="sns_bg">
               <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
@@ -74,7 +74,7 @@
             <a class="header_info-1_a" href=""><img class="header_info-1_img" src=""></a>
         </section>
       </header>
-      <main class="main_grid">
+      <main class="main_grid_top">
         <div class="main_bg-color-1">
         </div>
         <div class="main_bg-color-2">
@@ -134,18 +134,20 @@
             <!-- <img class="main_genre_img" src="img/k-pop.jpg" alt="K-POPの参考写真"> -->
           </div>
         </section>
-        <section class="main_joinus">
+        <section class="main_orange_box main_joinus">
           <h2 class="main_h2_white">JOIN US!</h2>
           <img class="main_joinus_img" src="">
           <p class="main_joinus_p">
           </p>
         </section>
-        <div class="main_joinus_bg-color">
+        <div class="main_orange_box_bg main_joinus_bg">
         </div>
       </main>
       <footer class="footer_footer">
           <div class="footer_logo">
+            <a class="footer_logo_a" href="index.html">
             <img class="footer_logo_img" src="img/LARGO_logo.png">
+            </a>
           </div>
           <div class="footer_sns_list">
             <ul class="sns_list">
@@ -177,7 +179,6 @@
           </nav>
         <p class="footer_footer_p">© 2020 HANABI</p>
       </footer>
-    </div>
     </div>
   </body>
 </html>

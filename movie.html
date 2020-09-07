@@ -3,55 +3,151 @@
   <head>
     <meta charset="UTF-8">
     <title>L.A.R.G.O -MOVIE-</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Sriracha|Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="parallax.min.js"></script>
-    <script src="script.js"></script>
+    <link href="js/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="js/slick.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      //slickの設定
+      $(document).ready(function(){
+        var main_slider = ".main_slider"; //メインスライダーid
+        var sub_slider = ".sub_slider"; //サムネイルスライダーid
+    $(main_slider).slick({
+      accessibility: true,
+        // autoplay: true, //自動スライド
+        // autoplaySpeed: 3000, //スライドさせる間隔
+        // dots: true, //ドットインジケーターを表示
+        // lazyLoad:"progressive", //画像の遅延読み込み
+        arrows: true, //スライドの左右の矢印ボタンを非表示
+        asNavFor: sub_slider,
+        speed: 1000,
+    　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
+    });
+    $(sub_slider).slick({
+        // autoplaySpeed: 3000, //スライドさせる間隔
+        // dots: false, //ドットインジケーターを表示
+        // lazyLoad:"progressive", //画像の遅延読み込み
+        arrows: true,
+        asNavFor: main_slider,
+        slidesToShow: 3,
+        speed: 1000
+    // 　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
+    });
+    $(sub_slider +" .slick-slide").on('click',function(){
+    var index = $(this).attr("data-slick-index");
+    $(sub_slider).slick("slickGoTo",index,false);
+  });
+  });
+    </script>
   </head>
-  <body class="page_movie">
-    <div class="wrap_grid">
-      <header class="header_header">
-        <div class="header_header_menu">
-          <h1 class="header_h1"><img class="" src="img/LARGO_logo.png"></h1>
-          <nav>
-            <ul class="header_nav_ul">
-              <li class="header_nav_li"><a class="header_nav_a" href="index.html">HOME</a></li>
-              <li class="header_nav_li"><a class="header_nav_a" href=./movie.html>MOVIE</a></li>
-              <li class="header_nav_li"><a class="header_nav_a" href=./genre.html>GENRE</a></li>
-              <li class="header_nav_li"><a class="header_nav_a" href="./contact.html">CONTACT</a></li>
-            </ul>
-          </nav>
+  <body class="page_top">
+    <div class="wrap">
+    <div class="wrap_grid_sub">
+      <header class="header_grid_sub header_bg_sub">
+        <section class="header_header_menu">
+        <h1 class="header_h1">
+          <a class="header_logo_a" href="index.html">
+            <img class="header_h1_img" src="img/LARGO_logo.png">
+          </a>
+        </h1>
+        <nav class="header_nav">
+          <ul class="header_nav_ul">
+            <li class="header_nav_li"><a class="header_nav_a" href="index.html">HOME</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href=./movie.html>MOVIE</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href=./genre.html>GENRE</a></li>
+            <li class="header_nav_li"><a class="header_nav_a" href="./contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        </section>
+        <div class="header_mv mv_sub mv_img_sub">
+          <!-- <img class="header_mv_img mv_img_sub" src="img/mv.jpg"> -->
         </div>
-        <div class="header_mv">
-          <img class="header_mv_img" src="img/mv.jpg">
+        <div class="header_mv_bg mv_bg_sub">
         </div>
+        <div class="header_logo header_logo_sub">
+          <img class="header_logo_img" src="img/LARGO_logo.png">
+        </div>
+        </section>
+        <section class="header_sns_link header_sns_sub">
+          <ul class="sns_list">
+            <li class="sns_bg">
+              <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+              <img  class=" sns_logo" src="img/Line_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+              <img  class=" sns_logo" src="img/youtube.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_insta sns_a" href="#">
+              <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+              <img  class=" sns_logo" src="img/Twitter_logo.png" alt="">
+            </a></li>
+          </ul>
+        </section>
       </header>
-      <main class="main_grid">
-        <div class="main_bg-color">
+      <main class="main_grid_sub">
+        <section class="main_orange_box main_cont">
+          <h2 class="main_h2_white">MOVIE</h2>
+          <ul class="slider slide_cont main_slider">
+            <li><img class="sns_logo" src="img/hiphop.jpg" alt=""></li>
+            <li><img class="sns_logo" src="img/idol.jpg" alt=""></li>
+            <li><img class="sns_logo" src="img/k-pop.jpg" alt=""></li>
+           </ul>
+           <ul class="slider slide_cont sub_slider">
+            <li><img class="sns_logo" src="img/hiphop.jpg" alt=""></li>
+            <li><img class="sns_logo" src="img/idol.jpg" alt=""></li>
+            <li><img class="sns_logo" src="img/k-pop.jpg" alt=""></li>
+           </ul>
+          <p class="main_mocvie_p">
+          </p>
+        </section>
+        <div class="main_orange_box_bg main_cont_bg">
         </div>
       </main>
       <footer class="footer_footer">
-          <div class="footer_logo">
-            <img class="footer_logo_img">
-          </div>
-            <ul class="footer_sns_list">
-              <li class="footer_sns_bg"><a class="footer_sns_line" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_youtube" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_insta" href="#"></a></li>
-              <li class="footer_sns_bg"><a class="footer_sns_twitter" href="#"></a></li>
-            </ul>
-          <nav class="footer_nav">
-            <ul class="footer_nav_list">
-              <li class="footer_nav_li"><a class="footer_nav_a" href="index.html">HOME</a></li>
-              <li class="footer_nav_li"><a class="footer_nav_a" href="./movie.html">MOVIE</a></li>
-              <li class="footer_nav_li"><a class="footer_nav_a" href="./genre.html">GENRE</a></li>
-              <li class="footer_nav_li"><a class="footer_nav_a" href="./contact.html">CONTACT</a></li>
-            </ul>
-          </nav>
-        <p class="footer_footer_p">© 2020 HANABI</p>
-      </footer>
+        <div class="footer_logo">
+          <a class="footer_logo_a" href="index.html">
+          <img class="footer_logo_img" src="img/LARGO_logo.png">
+          </a>
+        </div>
+        <div class="footer_sns_list">
+          <ul class="sns_list">
+            <li class="sns_bg">
+              <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+              <img  class=" sns_logo" src="img/Line_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+              <img  class=" sns_logo" src="img/youtube.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_insta sns_a" href="#">
+              <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+              <img  class=" sns_logo" src="img/Twitter_logo.png" alt="">
+            </a></li>
+          </ul>
+        </div>
+        <nav class="footer_nav">
+          <ul class="footer_nav_list">
+            <li class="footer_nav_li"><a class="footer_nav_a" href="index.html">HOME</a></li>
+            <li class="footer_nav_li"><a class="footer_nav_a" href="./movie.html">MOVIE</a></li>
+            <li class="footer_nav_li"><a class="footer_nav_a" href="./genre.html">GENRE</a></li>
+            <li class="footer_nav_li"><a class="footer_nav_a" href="./contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      <p class="footer_footer_p">© 2020 HANABI</p>
+    </footer>
     </div>
   </body>
 </html>

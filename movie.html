@@ -8,44 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="js/slick-theme.css" rel="stylesheet" type="text/css">
     <link href="js/slick.css" rel="stylesheet" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script type="text/javascript">
-      //slickの設定
-      $(document).ready(function(){
-        var main_slider = ".main_slider"; //メインスライダーid
-        var sub_slider = ".sub_slider"; //サムネイルスライダーid
-    $(main_slider).slick({
-      accessibility: true,
-        // autoplay: true, //自動スライド
-        // autoplaySpeed: 3000, //スライドさせる間隔
-        // dots: true, //ドットインジケーターを表示
-        // lazyLoad:"progressive", //画像の遅延読み込み
-        arrows: true, //スライドの左右の矢印ボタンを非表示
-        asNavFor: sub_slider,
-        speed: 1000,
-    　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
-    });
-    $(sub_slider).slick({
-        // autoplaySpeed: 3000, //スライドさせる間隔
-        // dots: false, //ドットインジケーターを表示
-        // lazyLoad:"progressive", //画像の遅延読み込み
-        arrows: true,
-        asNavFor: main_slider,
-        slidesToShow: 3,
-        speed: 1000
-    // 　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
-    });
-    $(sub_slider +" .slick-slide").on('click',function(){
-    var index = $(this).attr("data-slick-index");
-    $(sub_slider).slick("slickGoTo",index,false);
-  });
-  });
-    </script>
   </head>
-  <body class="page_top">
-    <div class="wrap">
+  <body class="">
     <div class="wrap_grid_sub">
       <header class="header_grid_sub header_bg_sub">
         <section class="header_header_menu">
@@ -71,7 +35,6 @@
         <div class="header_logo header_logo_sub">
           <img class="header_logo_img" src="img/LARGO_logo.png">
         </div>
-        </section>
         <section class="header_sns_link header_sns_sub">
           <ul class="sns_list">
             <li class="sns_bg">
@@ -96,18 +59,32 @@
       <main class="main_grid_sub">
         <section class="main_orange_box main_cont">
           <h2 class="main_h2_white">MOVIE</h2>
-          <ul class="slider slide_cont main_slider">
-            <li><img class="sns_logo" src="img/hiphop.jpg" alt=""></li>
-            <li><img class="sns_logo" src="img/idol.jpg" alt=""></li>
-            <li><img class="sns_logo" src="img/k-pop.jpg" alt=""></li>
-           </ul>
-           <ul class="slider slide_cont sub_slider">
-            <li><img class="sns_logo" src="img/hiphop.jpg" alt=""></li>
-            <li><img class="sns_logo" src="img/idol.jpg" alt=""></li>
-            <li><img class="sns_logo" src="img/k-pop.jpg" alt=""></li>
-           </ul>
           <p class="main_mocvie_p">
           </p>
+          <div class="main_movie">
+            <div class="main_movie_main">
+              <ul class="movie_year_ul">
+                <li><p>2016</p></li>
+                <li><p>2017</p></li>
+                <li><p>2018</p></li>
+                <li><p>2019</p></li>
+                <li><p>2020</p></li>
+              </ul>
+              <ul class="slide_cont main_slider">
+                <li class="slide_cont_li"></li><iframe class="slide_main_youtube"src="https://www.youtube.com/embed/CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                <li class="slide_cont_li"><iframe class="slide_main_youtube"src="https://www.youtube.com/embed/9bbSwRcOk6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                <li class="slide_cont_li"><iframe class="slide_main_youtube"src="https://www.youtube.com/embed/RLgipO9GdvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+              </ul>
+              <div class="main_movie_space"></div>
+            </div>
+            <div class="main_movie_sub">
+              <ul class="slide_cont sub_slider">
+                <li><iframe class="slide_sub_youtube"src="https://www.youtube.com/embed/CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                <li><iframe class="slide_sub_youtube"src="https://www.youtube.com/embed/9bbSwRcOk6s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+                <li><iframe class="slide_sub_youtube"src="https://www.youtube.com/embed/RLgipO9GdvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+              </ul>
+            </div>
+          </div>
         </section>
         <div class="main_orange_box_bg main_cont_bg">
         </div>
@@ -148,6 +125,60 @@
         </nav>
       <p class="footer_footer_p">© 2020 HANABI</p>
     </footer>
-    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/slick.min.js"></script>                    
+    <!-- <script src="js/script.js"></script> -->
+    <script type="text/javascript">
+      //slickの設定
+    $(document).ready(function(){
+      var main_slider = ".main_slider"; //メインスライダーid
+      var sub_slider = ".sub_slider"; //サムネイルスライダーid
+      $(main_slider).slick({
+      // accessibility: true,
+        // autoplay: true, //自動スライド
+        // autoplaySpeed: 3000, //スライドさせる間隔
+        // dots: true, //ドットインジケーターを表示
+        lazyLoad:"progressive", //画像の遅延読み込み
+        arrows: false, //スライドの左右の矢印ボタンを表示
+        // asNavFor: sub_slider,
+        waitForAnimate: false,
+        speed: 100,
+    　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
+       });
+      $(sub_slider).slick({
+        // centerPadding: 100px,
+        variableWidth: true,
+        accessibility: true,
+        infinite: true,
+        slidesToScroll: 1,
+      // autoplay: true,
+        autoplaySpeed: 3000, //スライドさせる間隔
+        // dots: false, //ドットインジケーターを表示
+        lazyLoad:"progressive", //画像の遅延読み込み
+        focusOnSelect: true,
+        arrows: true,
+        asNavFor: main_slider,
+        waitForAnimate: false,
+        slidesToShow: 2,
+        speed: 100,
+    　  cssEase:"cubic-bezier(0.9, 0.03, 0.4, 0.9)"　//CSS3アニメーションイージングを設定
+      });
+  //   $(sub_slider +" .slick-slide").on('click',function(){
+  //   var index = $(this).attr("data-slick-index");
+  //   $(sub_slider).slick("slickGoTo",index,false);
+  // });
+    });
+    </script>
+        </div>
   </body>
 </html>

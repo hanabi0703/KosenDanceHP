@@ -611,18 +611,18 @@ font-size: 2.2vw;
 }
 
 .main_movie_main {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
   height: 70%;
 }
 
 .movie_year_ul {
-  width: 15%;
+  width: 10%;
 }
 
 .main_movie_space {
-  width: 15%;
+  width: 10%;
 }
 
 .main_movie_sub {
@@ -630,39 +630,32 @@ font-size: 2.2vw;
   height: 30%;
 }
 
-
 /* MOVIEページのslick設定 */
 
-.slide_cont {
-
-}
-
 .main_slider {
-  margin: 0 auto 1vw;
-  width: 70%;
-  height: 50%;
+	margin: 3vw auto 0;
+	width: 70%;
+	height: 100%;
 }
 
 .slide_cont_li {
-  width: 100%;
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
+	width: 65.9vw;
+	/* height: 41vw; */
 }
 
 .sub_slider {
   margin: 3vw auto 0;
   width: 70%;
-  height: 20%;
+	height: 30%;
 }
 
 .slide_main_youtube {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 72.9vw; */
+	height: 37.1vw;
+	/* width: 560px;
+	height: 315px; */
+	width: 100%;
+	/* height: 100%; */
   z-index: 100;
 }
 

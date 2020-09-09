@@ -205,15 +205,16 @@
 .slick-prev:before,
 .slick-next:before {
     color: black;
+    font-size: 3vw;
     position: relative;
     z-index: 13;
 }
 .slick-next {
-    right: 0px;
+    right: -40px;
     z-index: 13;
     }
 
 .slick-prev {
-    left: -30px;
+    left: -60px;
     z-index: 13;
     }

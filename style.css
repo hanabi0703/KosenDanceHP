@@ -369,8 +369,9 @@ li {
   grid-template-columns: 3vw repeat(5,1fr) 3vw;
   grid-template-rows:
       [space01] 1fr
-      [cont] auto
-      [cont_bg-color] 1vw
+      [cont01] auto
+      [cont01_bg-color] 1vw
+      [cont02] auto
       [space02] 1fr;
   row-gap: 50px;
   z-index: -1;
@@ -599,19 +600,19 @@ font-size: 2.2vw;
 /* subページ設定 */
 
 .main_box_movie {
-  grid-row: cont;
+  grid-row: cont01;
   height: 90vw;
   z-index: 1 ;
 }
 
 .main_box_genre {
-	grid-row: cont;
+	grid-row: cont01;
   height: 45vw;
   z-index: 1 ;
 }
 
 .main_box_bg {
-  grid-row: cont / span 2;
+  grid-row: cont01 / span 2;
 }
 
 /* MOVIEページ設定 */
@@ -626,8 +627,8 @@ font-size: 2.2vw;
 .movie_year_space {
   width: 10%;
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .main_movie_space {
@@ -699,7 +700,28 @@ align-items: center;
 
   /* GENREページ設定 */
 
-
+  .main_genre_explain {
+    display: grid;
+    grid-column: 2 / -2;
+    grid-row: cont02;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows:
+    [h2] 1fr
+    [p] 1fr
+    [cont] 2fr;
+    height: 500px;
+    row-gap: 25px;
+  }
+  
+  .main_genre_h2 {
+    grid-column: 1 / -1;
+    grid-row: h2;
+  }
+  
+  .main_genre_p1 {
+    grid-column: 1 / -1;
+    grid-row: p;
+  }
 
 /* footerの設定_共通設定 */
 

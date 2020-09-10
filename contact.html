@@ -60,9 +60,26 @@
       <main class="main_grid_sub">
         <section class="main_orange_box main_cont">
           <h2 class="main_h2_white">CONTACT</h2>
-          <img class="main_movie_img" src="">
           <p class="main_mocvie_p">
-          </p>
+					</p>
+					<form action="confirm.php" method="post" name="form" onsubmit="return validate()">
+						<p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+						<div>
+								<div>
+										<label>お名前</label>
+										<input type="text" name="name" placeholder="例）山田太郎" value="">
+								</div>
+								<div>
+										<label>メールアドレス</label>
+										<input type="text" name="email" placeholder="例）guest@example.com" value="">
+								</div>
+								<div>
+										<label>お問い合わせ内容</label>
+										<textarea name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
+								</div>
+						</div>
+						<button type="submit">確認画面へ</button>
+				</form>
         </section>
         <div class="main_orange_box_bg main_cont_bg">
         </div>

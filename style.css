@@ -373,7 +373,7 @@ li {
       [cont_bg-color] 1vw
       [space02] 1fr;
   row-gap: 50px;
-  /* z-index: -1; */
+  z-index: -1;
 }
 
 .main_bg-color-1 {
@@ -598,15 +598,20 @@ font-size: 2.2vw;
 
 /* subページ設定 */
 
-.main_cont {
+.main_box_movie {
   grid-row: cont;
   height: 90vw;
   z-index: 1 ;
 }
 
-.main_cont_bg {
+.main_box_genre {
+	grid-row: cont;
+  height: 45vw;
+  z-index: 1 ;
+}
+
+.main_box_bg {
   grid-row: cont / span 2;
-  /* z-index: 1 ; */
 }
 
 /* MOVIEページ設定 */

@@ -373,7 +373,7 @@ li {
       [cont01_bg-color] 1vw
       [space02] 1fr;
   row-gap: 50px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .main_grid_genre {
@@ -417,7 +417,8 @@ li {
 .main_h2_white {
   color:#fff;
   border-bottom: 1px solid #fff;
-  font-size: 50px;
+	font-size: 4vw;
+	height: 5vw;
   margin: 30px 10px 0px;
   text-align: center;
 }
@@ -494,6 +495,7 @@ li {
   row-gap: 25px;
 }
 
+
 .main_genre_h2 {
   grid-column: 1 / -1;
   grid-row: h2;
@@ -513,19 +515,8 @@ li {
 
 }
 
-
-
-/* .main_genre_img {
-  background-blend-mode:overlay;
-	border: 9px solid #fff;
-  border-radius: 50%;
-  height: 13vw;
-	object-fit: cover;
-  width: 13vw;
-  vertical-align: middle;
-} */
-
 .main_genre_hiphop {
+
   grid-column: 1;
 	background: url('img/hiphop.jpg') no-repeat center;
 }
@@ -587,9 +578,24 @@ font-size: 2.2vw;
 .main_orange_box {
   background: #d9482e;
   border-radius: 6px 6px 6px 100px;
-  box-shadow: 0 20px 30px -15px;
+	box-shadow: 0 20px 30px -15px;
+	display: grid;
+	row-gap: 25px;
+	grid-row: genre;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-rows:
+  [h2] 1fr
+  [p] 1fr
+  [cont] 2fr;
   grid-column: 2 / -2;
-  height: 500px;
+  height: 70vw;
+}
+
+/* subページorange_box設定 */
+
+.sub_orange_box {
+  grid-row: cont01;
+  /* height: 500px; */
 }
 
 .main_joinus {
@@ -617,6 +623,12 @@ font-size: 2.2vw;
 }
 
 .main_box_genre {
+	grid-row: cont01;
+  height: 45vw;
+  z-index: 1 ;
+}
+
+.main_box_contact {
 	grid-row: cont01;
   height: 45vw;
   z-index: 1 ;
@@ -736,7 +748,7 @@ font-size: 2.2vw;
   grid-row: k-pop;
 }
   
-.main_genre_h2 {
+.sub_orange_box_h2 {
   grid-column: 1 / -1;
   grid-row: h2;
 }
@@ -755,7 +767,7 @@ font-size: 2.2vw;
   width: 100%;
 }
   
-.main_genre_p1 {
+.sub_orange_box_p1 {
   color: #fff4f2;
   font-size: 18px;
   grid-column: 2 / -2;
@@ -767,6 +779,58 @@ font-size: 2.2vw;
   font-size: 16px;
   grid-column: 2 / -2;
   grid-row: p;
+}
+
+/* CONTACTページ設定 */
+
+.main_contact_form {
+	margin: 0 auto;
+}
+
+.main_contact_cont {
+	grid-row: cont;
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-rows:
+	[name] 1fr
+	[mail] 1fr
+	[content] 1fr
+	[button] 1fr;
+	margin: 3vw 0;
+  row-gap: 2vw;
+  text-align: left;
+}
+
+.contact_label {
+	color: #fff4f2;
+	grid-column: 2;
+}
+
+.contact_input {
+	font-size: 1vw;
+	grid-column: 3 /span 2;
+}
+
+.contact_name {
+	grid-row: name;
+	height: 3vw;
+}
+
+.contact_mail {
+	grid-row: mail;
+	height: 3vw;
+}
+
+.contact_content {
+	grid-row: content;
+	height: 5vw;
+}
+
+.contact_button {
+	grid-row: button;
+	grid-column: 4 / -4;
+	height: 5vw;
 }
 
 /* footerの設定_共通設定 */

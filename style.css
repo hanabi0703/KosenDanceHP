@@ -355,7 +355,8 @@ li {
       [genre] auto
       [joinus] auto
       [joinus_bg-color] 1vw
-      [space]auto;
+			[space]auto;
+	position: relative;
   row-gap: 50px;
   z-index: -1
 }
@@ -371,8 +372,9 @@ li {
       [space01] 1fr
       [cont01] auto
       [cont01_bg-color] 1vw
-      [space02] 1fr;
-  row-gap: 50px;
+			[space02] 1fr;
+	position: relative;
+	row-gap: 50px;
   /* z-index: -1; */
 }
 
@@ -585,10 +587,37 @@ font-size: 2.2vw;
 	grid-template-columns: repeat(5,1fr);
 	grid-template-rows:
   [h2] 1fr
-  [p] 1fr
+  [p] .5fr
   [cont] 2fr;
   grid-column: 2 / -2;
-  height: 70vw;
+	height: 50vw;
+	z-index: 30;
+}
+
+.main_grid_top:after {
+  background: #7b463c;
+  border-radius: 6px 6px 6px 100px;
+	box-shadow: 0 0 30px -8px;
+  grid-row: joinus / span 2;
+	content: '';
+	height: 100%;
+	grid-column: 2 / -2;
+	position: absolute;
+	width: 100%;
+  z-index: 10;
+}
+
+.main_grid_sub:after {
+	background: #7b463c;
+  border-radius: 6px 6px 6px 100px;
+	box-shadow: 0 0 30px -8px;
+  grid-row: cont01 / span 2;
+	content: '';
+	height: 100%;
+	grid-column: 2 / -2;
+	position: absolute;
+	width: 100%;
+  z-index: 10;
 }
 
 /* subページorange_box設定 */
@@ -602,14 +631,6 @@ font-size: 2.2vw;
   grid-row: joinus;
 }
 
-.main_orange_box_bg {
-  background: #7b463c;
-  border-radius: 6px 6px 6px 100px;
-  box-shadow: 0 0 30px -8px;
-  grid-column: 2 / -2;
-  z-index: -1 ;
-}
-
 .main_joinus_bg {
   grid-row: joinus / span 2;
 }
@@ -618,20 +639,16 @@ font-size: 2.2vw;
 
 .main_box_movie {
   grid-row: cont01;
-  /* height: 70vw; */
-  z-index: 1 ;
 }
 
 .main_box_genre {
 	grid-row: cont01;
-  height: 45vw;
-  z-index: 1 ;
+  /* height: 45vw; */
 }
 
 .main_box_contact {
 	grid-row: cont01;
-  height: 45vw;
-  z-index: 1 ;
+  /* height: 45vw; */
 }
 
 .main_box_bg {
@@ -810,6 +827,8 @@ font-size: 2.2vw;
 .contact_input {
 	font-size: 1vw;
 	grid-column: 3 /span 2;
+	border-radius: 4px 4px 4px 15px;
+	border: solid	1px	#707070;
 }
 
 .contact_name {
@@ -828,6 +847,9 @@ font-size: 2.2vw;
 }
 
 .contact_button {
+	border-radius: 4px 4px 4px 15px;
+	border: solid	1px	#707070;
+	font-size: 1.2vw;
 	grid-row: button;
 	grid-column: 4 / -4;
 	height: 5vw;

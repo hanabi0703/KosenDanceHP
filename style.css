@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 全体設定 */
 /* テキストの自動拡大を無効化*/
 body {
   .webkit-text-size-adjust:none;
@@ -8,15 +9,9 @@ body {
   /* width: 100%; */
 }
 
-/*基本設定*/
-
 * {
   margin: 0;
   padding: 0;
-}
-
-img {
-
 }
 
 a {
@@ -26,11 +21,15 @@ a {
 li {
   list-style: none;
 }
+/* PCスマホ共通設定 */
+/* ***********************************************************
+* #header
+* *********************************************************** */
 
 /* ページ設定_TOP */
 .wrap_grid_top {
   display: grid;
-  grid-template-rows: 47vw 1fr 40vw;
+  grid-template-rows: 60vw 1fr 40vw;
   grid-template-areas:
           "head head head"
           "main main main"
@@ -67,7 +66,6 @@ li {
       [mv5] 1fr
       [mv6] .2fr
       [bottom01] .3fr;
-  /* height: 45vw; */
   row-gap: 1vw;
 }
 
@@ -84,16 +82,6 @@ li {
   row-gap: 1vw;
 }
 
-.header_header_grid {
-  /* background: rgba(0,0,0,0.5); */
-	display: grid;
-	grid-template-columns: 3vw repeat(5,1fr) 3vw;
-  grid-row: header;
-  grid-column: 1 / -1;
-  justify-content: space-around;
-  z-index: 200;
-}
-
 .header_bg_top {
   background: #d9482e;
 }
@@ -103,50 +91,17 @@ li {
 
 }
 
-.header_header_menu {
-  background: rgba(0,0,0,0.5);
-	display: grid;
-	grid-template-columns: 3vw repeat(5,1fr) 3vw;
-  grid-row: header;
-  grid-column: 1 / -1;
-  justify-content: space-around;
-  position: absolute;
-  width: 100%;
-  z-index: 200;
-}
-
 .header_h1 {
-  grid-row: 1;
-  grid-column: 2;
-}
-
-
-.header_h1_img {
-  width: 100%;
+	display: none;
 }
 
 .header_nav {
-  grid-row: 1;
-  grid-column: 4 / nav 3;
-}
-
-.header_nav_ul {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-}
-
-.header_nav_li {
-  margin: 1vw 2vw;
-  font-size: 2vw;
-}
-
-.header_nav_a {
-  color: #fff;
+	display: none;
+	/* grid-column: 4 / nav 3;
+  grid-row: 1; */
 }
 
 .header_mv {
-  /* background: #d9482e; */
   grid-column: 1 / -1;
   z-index: 50;
 }
@@ -186,7 +141,6 @@ li {
 
 .mv_img_sub:after {
   content: ' ';
-  /* background-color: rgba(255, 255, 255, .5); */
   backdrop-filter: blur(2px);
   border-radius: 0px 0px 0px 20vw;
   width: 100%;
@@ -213,7 +167,6 @@ li {
 }
 
 .header_logo {
-  /* background: rgba(255, 255, 0, .8); */
   grid-column: 5 / span 4;
   margin: auto  0 0;
   z-index:200;
@@ -237,61 +190,14 @@ li {
 }
 
 .header_twitter {
-  /* background: rgba(0, 0, 0, .8); */
-  grid-column: 2 / span 2;
-  grid-row: mv1 / span 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index:200;
+	display: none;
 }
-
-.header_twitter_h2_div {
-  display: table;
-  height: 15%;
-}
-
-.header_twitter_h2 {
-  background: rgba(0, 0, 0, .5);
-  border-radius: 6px;
-  display: table-cell;
-  color: #fff4f2;
-  text-align: center;
-  /* height: 15%; */
-  vertical-align: middle;
-  width: 100%;
-}
-
-.header_twitter_cont {
-  background: rgba(255, 255, 255, .8);
-  border-radius: 6px;
-  height: 80%;
-  width: 100%;
-}
-
-/* .header_insta {
-  background: rgba(0, 255, 0, .8);
-  grid-column: 2 / span 2;
-  grid-row: mv4 / span 2;
-  z-index:200;
-} */
 
 .header_youtube {
-  /* background: rgba(0, 255, 255, .8); */
-  grid-column: 9 / span 3;
-  grid-row: mv3 / span 2;
-  z-index:200;
-}
-
-.header_youtube_cont {
-  display: block;
-  margin: 0 0 0 auto;
-  height: 15.8vw;
-  width: 28.1vw;
+	display: none;
 }
 
 .header_sns_link {
-  /* background: rgba(255, 255, 255, .8); */
   grid-column: 9 / span 3;
   height: 5vw;
   margin: auto  0 0;
@@ -305,7 +211,6 @@ li {
 .header_sns_sub {
   grid-row: mv2;
 }
-
 
 .sns_list {
   display: flex;
@@ -870,12 +775,29 @@ right: 0;
 }
 
 .contact_button {
+	background-color: #F16C55;
 	border-radius: 4px 4px 4px 15px;
 	border: solid	1px	#707070;
+	/* color: #fff4f2; */
 	font-size: 1.2vw;
 	grid-row: button;
 	grid-column: 4 / -4;
 	height: 5vw;
+	position: relative;
+	/* z-index: 30; */
+}
+
+.contact_button:before {
+	background: #4186B4;
+	border-radius: 4px 4px 4px 15px;
+	box-shadow: 0 0 30px -8px;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	z-index: -1;
 }
 
 /* footerの設定_共通設定 */
@@ -945,4 +867,108 @@ right: 0;
   grid-column: 5 / span 3;
   grid-row: footer4;
   justify-content: center;
+}
+@media screen and (min-width:768px){
+
+	/* grid設定 */
+.wrap_grid_top {
+	grid-template-rows: 47vw 1fr 40vw;
+}
+
+/* header設定 */
+.header_header_grid {
+	display: grid;
+	grid-template-columns: 3vw repeat(5,1fr) 3vw;
+  grid-row: header;
+  grid-column: 1 / -1;
+  justify-content: space-around;
+  z-index: 200;
+}
+
+.header_header_menu {
+  background: rgba(0,0,0,0.5);
+	display: grid;
+	grid-template-columns: 3vw repeat(5,1fr) 3vw;
+  grid-row: header;
+  grid-column: 1 / -1;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+}
+
+.header_h1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.header_h1_img {
+  width: 100%;
+}
+
+.header_nav {
+	grid-column: 4 / nav 3;
+  grid-row: 1;
+}
+
+.header_nav_ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.header_nav_li {
+  font-size: 2vw;
+  margin: 1vw 2vw;
+}
+
+.header_nav_a {
+  color: #fff;
+}
+
+/* header_twitter設定 */
+.header_twitter {
+  grid-column: 2 / span 2;
+  grid-row: mv1 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index:200;
+}
+
+.header_twitter_h2_div {
+  display: table;
+  height: 15%;
+}
+
+.header_twitter_h2 {
+  background: rgba(0, 0, 0, .5);
+  border-radius: 6px;
+  display: table-cell;
+  color: #fff4f2;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.header_twitter_cont {
+  background: rgba(255, 255, 255, .8);
+  border-radius: 6px;
+  height: 80%;
+  width: 100%;
+}
+
+/* header_youtube設定 */
+.header_youtube {
+  grid-column: 9 / span 3;
+  grid-row: mv3 / span 2;
+  z-index:200;
+}
+
+.header_youtube_cont {
+  display: block;
+  margin: 0 0 0 auto;
+  height: 15.8vw;
+  width: 28.1vw;
+}
 }

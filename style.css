@@ -91,14 +91,8 @@ li {
 
 }
 
-.header_h1 {
+.header_header_menu {
 	display: none;
-}
-
-.header_nav {
-	display: none;
-	/* grid-column: 4 / nav 3;
-  grid-row: 1; */
 }
 
 .header_mv {
@@ -251,8 +245,9 @@ li {
   display: grid;
   grid-area: main;
   grid-template-columns: 3vw repeat(5,1fr) 3vw;
-  grid-template-rows:
-      [news] auto
+	grid-template-rows:
+			[news] auto
+			[twitter] auto
       [about] auto
       [activ] auto
       [bg-color-1] 10vw
@@ -262,8 +257,8 @@ li {
       [joinus_bg-color] 1vw
 			[space]auto;
 	position: relative;
-  row-gap: 50px;
-  z-index: -1
+	row-gap: 50px;
+	width: 100%;
 }
 
 /* SUBページmainエリアの設定 */
@@ -280,7 +275,6 @@ li {
 			[space02] 1fr;
 	position: relative;
 	row-gap: 50px;
-  /* z-index: -1; */
 }
 
 .main_grid_genre {
@@ -299,26 +293,37 @@ li {
 .main_bg-color-1 {
   background: #d9482e;
   border-radius: 0px 0px 0px 100px;
-  box-shadow: 0 0 30px -8px;
+  box-shadow: 0 30px 20px -10px rgba(0, 0, 0, .4);
   grid-column: 1 / -1;
   grid-row: news / span 4;
-  z-index: -2;
+  z-index: 3;
 }
 
 .main_bg-color-2 {
   background: #7b463c;
   border-radius: 0px 0px 0px 100px;
-  box-shadow: 0 0 30px -8px;
+  box-shadow: 0 30px 20px -10px rgba(0, 0, 0, .4);
   grid-column: 1 / -1;
   grid-row: news / span 5;
-  z-index: -3;
+  z-index: 2;
+}
+
+.main_twitter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 2 / -2;
+	grid-row: twitter;
+	height: 80vw;
+	z-index: 5;
 }
 
 .main_news {
-  background: #d9482e;
+  /* background: #d9482e; */
   grid-column: 2 / -2;
   grid-row: news;
-  height: 400px;
+	height: 20vw;
+	z-index: 5;
 }
 
 .main_h2_white {
@@ -327,7 +332,17 @@ li {
 	font-size: 4vw;
 	height: 5vw;
   margin: 30px 10px 0px;
-  text-align: center;
+	text-align: center;
+	z-index: 5;
+}
+
+.main_twitter_cont {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 6px;
+	height: 80%;
+	margin: 3vw auto;
+	width: 90%;
+	z-index: 200;
 }
 
 .main_about {
@@ -336,7 +351,8 @@ li {
   box-shadow: 0 0 30px -8px;
   grid-column: 2 / -2;
   grid-row: about;
-  /* height: 800px; */
+	/* height: 800px; */
+	z-index: 5;
 }
 
 .main_h2_orange {
@@ -384,10 +400,11 @@ li {
 }
 
 .main_activ {
-  background: #d9482e;
+  /* background: #d9482e; */
   grid-column: 2 / -2;
   grid-row: activ;
-  height: 300px;
+	height: 300px;
+	z-index: 5;
 }
 
 .main_genre {
@@ -875,6 +892,19 @@ right: 0;
 	grid-template-rows: 47vw 1fr 40vw;
 }
 
+.main_grid_top {
+	grid-template-rows:
+			[twitter-news] auto
+      [about] auto
+      [activ] auto
+      [bg-color-1] 10vw
+      [bg-color-2] 3vw
+      [genre] auto
+      [joinus] auto
+      [joinus_bg-color] 1vw
+			[space]auto;
+}
+
 /* header設定 */
 .header_header_grid {
 	display: grid;
@@ -926,40 +956,31 @@ right: 0;
   color: #fff;
 }
 
+.main_bg-color-1 {
+  grid-row: twitter-news / span 4;
+}
+
+.main_bg-color-2 {
+  grid-row: twitter-news / span 5;
+}
+
 /* header_twitter設定 */
-.header_twitter {
+.main_twitter {
   grid-column: 2 / span 2;
-  grid-row: mv1 / span 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index:200;
+	grid-row: twitter-news;
+	height: 55vw;
 }
 
-.header_twitter_h2_div {
-  display: table;
-  height: 15%;
-}
 
-.header_twitter_h2 {
-  background: rgba(0, 0, 0, .5);
-  border-radius: 6px;
-  display: table-cell;
-  color: #fff4f2;
-  text-align: center;
-  vertical-align: middle;
-  width: 100%;
+.main_news {
+  grid-column: 4 / -2;
+  grid-row: twitter-news;
+	/* height: 400px; */
+	z-index: 5;
 }
-
-.header_twitter_cont {
-  background: rgba(255, 255, 255, .8);
-  border-radius: 6px;
-  height: 80%;
-  width: 100%;
-}
-
 /* header_youtube設定 */
 .header_youtube {
+	display: block;
   grid-column: 9 / span 3;
   grid-row: mv3 / span 2;
   z-index:200;

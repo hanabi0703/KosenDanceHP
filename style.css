@@ -855,6 +855,12 @@ right: 0;
   grid-row: footer3;
 }
 
+.footer_sns_icon {
+  font-size: 5vw;
+  color: #eb7437;
+  filter: drop-shadow( 0 0 5px #eb7437);
+}
+
 .footer_nav {
   align-items: center;
   display: flex;

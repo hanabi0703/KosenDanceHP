@@ -48,6 +48,7 @@ li {
           "foot foot foot";
   grid-template-columns: 3vw 1fr 3vw;
   z-index: -100;
+  height: 100vh;
 }
 
 
@@ -269,10 +270,10 @@ li {
   grid-area: main;
   grid-template-columns: 3vw repeat(5,1fr) 3vw;
   grid-template-rows:
-      [space01] 1fr
+      [space01] .2fr
       [cont01] auto
       [cont01_bg-color] .1vw
-			[space02] 1fr;
+			[space02] .2fr;
 	position: relative;
 	row-gap: 5vw;
 }
@@ -329,7 +330,8 @@ li {
 .main_h2_white {
   color:#fff;
   border-bottom: 1px solid #fff;
-	font-size: 8vw;
+  font-size: 8vw;
+  grid-row: h2;
   margin: 2vw 3vw 0px;
 	text-align: center;
 	z-index: 5;
@@ -548,7 +550,7 @@ font-size: 8vw;
 
 .main_grid_sub:after {
 	background: #7b463c;
-  border-radius: 6px 6px 6px 100px;
+  border-radius: 6px 6px 6px 20vw;
 	box-shadow: 0 0 30px -8px;
   grid-row: cont01 / span 2;
 	content: '';
@@ -566,7 +568,7 @@ font-size: 8vw;
 }
 
 .main_box_movie {
-	height: 80vw;
+	height: auto;
 }
 
 .main_joinus {
@@ -601,6 +603,7 @@ font-size: 8vw;
 .main_movie {
   grid-row: cont;
   grid-column: 1 / -1;
+  height: 80%;
 }
 
 .main_movie_main {

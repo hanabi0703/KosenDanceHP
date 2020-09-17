@@ -250,14 +250,14 @@ li {
 			[twitter] auto
       [about] auto
       [activ] auto
-      [bg-color-1] 10vw
+      [bg-color-1] 4vw
       [bg-color-2] 3vw
       [genre] auto
       [joinus] auto
       [joinus_bg-color] 1vw
 			[space]auto;
 	position: relative;
-	row-gap: 50px;
+	row-gap: 4vw;
 	width: 100%;
 }
 
@@ -292,7 +292,7 @@ li {
 
 .main_bg-color-1 {
   background: #d9482e;
-  border-radius: 0px 0px 0px 100px;
+  border-radius: 0px 0px 0px 20vw;
   box-shadow: 0 30px 20px -10px rgba(0, 0, 0, .4);
   grid-column: 1 / -1;
   grid-row: news / span 4;
@@ -301,7 +301,7 @@ li {
 
 .main_bg-color-2 {
   background: #7b463c;
-  border-radius: 0px 0px 0px 100px;
+  border-radius: 0px 0px 0px 20vw;
   box-shadow: 0 30px 20px -10px rgba(0, 0, 0, .4);
   grid-column: 1 / -1;
   grid-row: news / span 5;
@@ -322,7 +322,7 @@ li {
   /* background: #d9482e; */
   grid-column: 2 / -2;
   grid-row: news;
-	height: 20vw;
+	height: 30vw;
 	z-index: 5;
 }
 
@@ -354,7 +354,7 @@ li {
 
 .main_about {
   background: #fff4f2;
-  border-radius: 6px 6px 6px 100px;
+  border-radius: 6px 6px 6px 20vw;
   box-shadow: 0 0 30px -8px;
   grid-column: 2 / -2;
   grid-row: about;
@@ -376,7 +376,7 @@ li {
 .main_about_about,
 .main_about_bucho {
 	width: 80%;
-	margin: 5vw auto 3vw;
+	margin: 5vw auto 10vw;
 	text-align: center;
 	border: solid 1px #d9482e;
 	border-radius: 5px 5px 5px 5px;
@@ -402,9 +402,7 @@ li {
 .main_about_p {
 	font-size: 2vw;
   margin: 5vw auto;
-  /* padding: 0 10px 0; */
   white-space: pre-wrap;
-  /* width: 90%; */
 }
 
 .main_about_bucho {
@@ -415,7 +413,7 @@ li {
   /* background: #d9482e; */
   grid-column: 2 / -2;
   grid-row: activ;
-	height: 300px;
+	height: 80vw;
 	z-index: 5;
 }
 
@@ -423,12 +421,16 @@ li {
   display: grid;
   grid-column: 2 / -2;
   grid-row: genre;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: 1fr;
   grid-template-rows:
-  [h2] 1fr
-  [p] 1fr
-  [cont] 2fr;
-  height: 500px;
+  [h2] auto
+  [p] auto
+  [hiphop] 1fr
+  [krump] 1fr
+  [vocaloid] 1fr
+  [idol] 1fr
+  [k-pop] 1fr;
+  /* height: 100vw; */
   row-gap: 25px;
 }
 
@@ -441,6 +443,9 @@ li {
 .main_genre_p1 {
   grid-column: 1 / -1;
   grid-row: p;
+  width: 80%;
+  font-size: 3vw;
+  margin: 0 auto;
 }
 
 .main_genre_p2 {
@@ -453,28 +458,27 @@ li {
 }
 
 .main_genre_hiphop {
-
-  grid-column: 1;
+  grid-row: hiphop;
 	background: url('img/hiphop.jpg') no-repeat center;
 }
 
 .main_genre_krump {
-  grid-column: 2;
+  grid-row: krump;
   background: url('img/krump.jpg') no-repeat center;
 }
 
 .main_genre_vocaloid {
-  grid-column: 3;
+  grid-row: vocaloid;
   background: url('img/vocaloid.jpg') no-repeat center;
 }
 
 .main_genre_idol{
-  grid-column: 4;
+  grid-row: idol;
   background: url('img/idol.jpg') no-repeat center;
 }
 
 .main_genre_k-pop {
-  grid-column: 5;
+  grid-row: k-pop;
   background: url('img/k-pop.jpg') no-repeat center;
 }
 
@@ -488,13 +492,13 @@ li {
    border: 0.5vw solid #fff;
    border-radius: 50%;
    display: flex;
-   grid-row: cont;
-   font-size: 3vw;
-   height: 13vw;
+   /* grid-row: cont; */
+   font-size: 10vw;
+   height: 50vw;
    justify-content: center;
    margin: auto;
    position: relative;
-   width: 13vw;
+   width: 50vw;
 }
 
 .main_genre_div:before {
@@ -509,12 +513,12 @@ li {
 }
 
 .main_genre_vocaloid{
-font-size: 2.2vw;
+font-size: 8vw;
 }
 
 .main_orange_box {
   background: #d9482e;
-  border-radius: 6px 6px 6px 100px;
+  border-radius: 6px 6px 6px 20vw;
 	box-shadow: 0 20px 30px -15px;
 	display: grid;
 	row-gap: 25px;
@@ -531,7 +535,7 @@ font-size: 2.2vw;
 
 .main_grid_top:after {
   background: #7b463c;
-  border-radius: 6px 6px 6px 100px;
+  border-radius: 6px 6px 6px 20vw;
 	box-shadow: 0 0 30px -8px;
   grid-row: joinus / span 2;
 	content: '';
@@ -1026,14 +1030,65 @@ right: 0;
 
 .main_about_h3 {
   font-size: 3vw;
-  /* padding-left: 3vw; */
 }
 
 .main_about_p {
 	font-size: 2vw;
   margin: 5vw 2vw;
-  /* padding: 0 10px 0; */
   white-space: pre-wrap;
 }
+
+.main_genre {
+  display: grid;
+  grid-column: 2 / -2;
+  grid-row: genre;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows:
+  [h2] auto
+  [p] auto
+  [cont] 15vw;
+  /* height: 100vw; */
+  row-gap: 25px;
+}
+
+.main_genre_p1 {
+  grid-column: 1 / -1;
+  grid-row: p;
+  width: 80%;
+  font-size: 1vw;
+  margin: 0 auto;
+}
+
+.main_genre_div {
+  align-items: center;
+  /* text-align: center;  */
+   /* ↑imgの上下中央配置：flexで実現したため削除 */
+   background-blend-mode:overlay;
+   background-color: rgba(0, 0, 0, .2);
+   background-size: cover;
+   border: 0.5vw solid #fff;
+   border-radius: 50%;
+   display: flex;
+   grid-row: cont;
+   font-size: 3vw;
+   height: 13vw;
+   justify-content: center;
+   margin: auto;
+   position: relative;
+   width: 13vw;
+}
+
+
+.main_genre_div:before {
+	content: ' ';
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
 
 }

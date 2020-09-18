@@ -402,7 +402,8 @@ li {
 }
 
 .main_about_p {
-	font-size: 2vw;
+  font-size: 3.3vw;
+  line-height: 1.8;
   margin: 5vw auto;
   white-space: pre-wrap;
 }
@@ -423,17 +424,12 @@ li {
   display: grid;
   grid-column: 2 / -2;
   grid-row: genre;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(5,1fr);
   grid-template-rows:
   [h2] auto
   [p] auto
-  [hiphop] 1fr
-  [krump] 1fr
-  [vocaloid] 1fr
-  [idol] 1fr
-  [k-pop] 1fr;
-  /* height: 100vw; */
-  row-gap: 25px;
+  [cont] auto;
+  row-gap: 1vw;
 }
 
 
@@ -446,7 +442,8 @@ li {
   grid-column: 1 / -1;
   grid-row: p;
   width: 80%;
-  font-size: 3vw;
+  font-size: 3.3vw;
+  line-height: 1.8;
   margin: 0 auto;
 }
 
@@ -459,28 +456,36 @@ li {
 
 }
 
+.genre_cont {
+  grid-column: 1 / -1;
+  grid-row: cont;
+  display: flex;
+  height: 35vw;
+  margin:  0 auto;
+}
+
 .main_genre_hiphop {
-  grid-row: hiphop;
+  align-self: flex-start;
 	background: url('img/hiphop.jpg') no-repeat center;
 }
 
 .main_genre_krump {
-  grid-row: krump;
+  align-self: flex-end;
   background: url('img/krump.jpg') no-repeat center;
 }
 
 .main_genre_vocaloid {
-  grid-row: vocaloid;
+  align-self: flex-start;
   background: url('img/vocaloid.jpg') no-repeat center;
 }
 
 .main_genre_idol{
-  grid-row: idol;
+  align-self: flex-end;
   background: url('img/idol.jpg') no-repeat center;
 }
 
 .main_genre_k-pop {
-  grid-row: k-pop;
+  align-self: flex-start;
   background: url('img/k-pop.jpg') no-repeat center;
 }
 
@@ -494,13 +499,12 @@ li {
    border: 0.5vw solid #fff;
    border-radius: 50%;
    display: flex;
-   /* grid-row: cont; */
-   font-size: 10vw;
-   height: 50vw;
+   grid-row: cont;
+   font-size: 4vw;
+   height: 17vw;
    justify-content: center;
-   margin: auto;
    position: relative;
-   width: 50vw;
+   width: 17vw;
 }
 
 .main_genre_div:before {
@@ -515,7 +519,7 @@ li {
 }
 
 .main_genre_vocaloid{
-font-size: 8vw;
+font-size: 3vw;
 }
 
 .main_orange_box {
@@ -523,7 +527,7 @@ font-size: 8vw;
   border-radius: 6px 6px 6px 20vw;
 	box-shadow: 0 20px 30px -15px;
 	display: grid;
-	row-gap: 25px;
+	row-gap: 1vw;
 	grid-row: genre;
 	grid-template-columns: repeat(5,1fr);
 	grid-template-rows:
@@ -531,7 +535,7 @@ font-size: 8vw;
   [p] .5fr
   [cont] 3fr;
   grid-column: 2 / -2;
-	height: 60vw;
+	/* height: 60vw; */
 	z-index: 30;
 }
 
@@ -582,11 +586,15 @@ font-size: 8vw;
 
 .main_box_genre {
 	grid-row: cont01;
-  height: 50vw;
+  /* height: 50vw; */
   grid-template-rows:
   [h2] .3fr
   [p] .3fr
-  [cont] 1fr;
+  [cont] auto;
+}
+
+.genre_cont {
+  margin:  0 auto 5vw;
 }
 
 .main_box_contact {
@@ -748,17 +756,22 @@ right: 0;
   
 .sub_orange_box_p1 {
   color: #fff4f2;
-  font-size: 1.5vw;
-  grid-column: 2 / -2;
+  font-size: 3.3vw;
+  line-height: 1.8;
+  grid-column: 1 / -1;
   grid-row: p;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .main_genre_explain_p1 {
   color: #d9482e;
-  font-size: 1.5vw;
+  font-size: 3.5vw;
+  line-height: 2.5;
   margin:  0 auto;
   grid-column: 1 / -1;
   grid-row: p;
+  width: 80%;
 }
 
 /* CONTACTページ設定 */
@@ -783,8 +796,10 @@ right: 0;
 }
 
 .contact_label {
-	color: #fff4f2;
-	grid-column: 2;
+  color: #fff4f2;
+  font-size: 3vw;
+  grid-column: 1 / span 2;
+  padding: 0 0 0 3vw;
 }
 
 .contact_input {
@@ -1036,7 +1051,8 @@ right: 0;
 }
 
 .main_about_p {
-	font-size: 2vw;
+  font-size: 2vw;
+  line-height: 2;
   margin: 5vw 2vw;
   white-space: pre-wrap;
 }
@@ -1050,8 +1066,7 @@ right: 0;
   [h2] auto
   [p] auto
   [cont] 15vw;
-  /* height: 100vw; */
-  row-gap: 25px;
+  row-gap: 1vw;
 }
 
 .main_genre_p1 {

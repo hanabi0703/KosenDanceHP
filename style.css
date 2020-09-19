@@ -346,7 +346,8 @@ li {
 }
 
 .main_twitter_cont {
-  background: rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, 0.6);
+  border: solid	1px	#fff4f2;;
   border-radius: 6px;
 	height: 80%;
 	margin: 0 auto;

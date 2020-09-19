@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, a:active,a:visited {
+	color: #eb7437;
+}
+
 li {
   list-style: none;
 }
@@ -89,10 +93,70 @@ li {
 
 .header_bg_sub {
   background: #fff4f2;
-
 }
 
 .header_header_menu {
+  background: rgba(0,0,0,0.8);
+  /* grid-column: 1 / -1; */
+  /* justify-content: space-around; */
+	position: fixed;
+	height: 20vw;
+  width: 100%;
+	z-index: 200;
+	bottom: 0;
+}
+
+.header_nav {
+	height: 100%;
+}
+
+.header_nav_ul {
+	display: grid;
+	grid-template-columns:
+	[home] 1fr
+	[movie] 1fr
+	[genre] 1fr
+	[contact] 1fr;
+	height: 100%;
+	text-align: center;
+}
+
+.header_nav_li {
+display: inline-flex;
+}
+
+.header_icon {
+  color: #eb7437;
+	font-size: 8vw;
+  filter: drop-shadow( 0 0 5px #eb7437);
+}
+
+.header_nav_home {
+	grid-column: home;
+}
+
+.header_nav_movie {
+	grid-column: movie;
+}
+
+.header_nav_genre {
+	grid-column: genre;
+}
+
+.header_nav_contact {
+	grid-column: contact;
+}
+
+.header_nav_a {
+	margin: auto;
+	height: 80%;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.header_h1 {
 	display: none;
 }
 
@@ -110,7 +174,7 @@ li {
 }
 
 .mv_img_top {
-  border-radius: 0px 0px 0px 20vw;
+  border-radius: 0px 0px 0px 15vw;
   box-shadow: 0 0 30px -8px;
   /* vertical-align: bottom; */ /* TODO: いらないかも・・要検証 */
   height: 100%;
@@ -124,7 +188,7 @@ li {
   background-position: 50% 30% ;
   background-size: cover;
   backdrop-filter: blur(12px);
-  border-radius: 0px 0px 0px 20vw;
+  border-radius: 0px 0px 0px 15vw;
   box-shadow: 0 0 30px -8px;
   height: 100%;
   object-position: 0% 30%;
@@ -137,7 +201,7 @@ li {
 .mv_img_sub:after {
   content: ' ';
   backdrop-filter: blur(2px);
-  border-radius: 0px 0px 0px 20vw;
+  border-radius: 0px 0px 0px 15vw;
   width: 100%;
   height: 100%;
 	position: absolute;
@@ -148,7 +212,7 @@ li {
 }
 
 .header_mv_bg {
-  border-radius: 0px 0px 0px 20vw;
+  border-radius: 0px 0px 0px 15vw;
   box-shadow: 0 0 30px -8px;
   background: #7b463c;
   content:"";
@@ -242,7 +306,8 @@ li {
 /* HOMEページmainエリアの設定 */
 
 .main_grid_top {
-  background: #fff4f2;
+	background: #fff4f2;
+	border-radius: 0 0 0 20vw;
   display: grid;
   grid-area: main;
   grid-template-columns: 3vw repeat(5,1fr) 3vw;
@@ -262,10 +327,20 @@ li {
 	width: 100%;
 }
 
+.main_grid_top:before {
+	content: '';
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -100;
+}
+
 /* SUBページmainエリアの設定 */
 
 .main_grid_sub {
   background: #fff4f2;
+	border-radius: 0 0 0 20vw;
   display: grid;
   grid-area: main;
   grid-template-columns: 3vw repeat(5,1fr) 3vw;
@@ -278,6 +353,15 @@ li {
 	row-gap: 5vw;
 }
 
+.main_grid_sub:before {
+	content: '';
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -100;
+}
+
 .main_grid_genre {
   grid-template-rows:
   [space01] 1fr
@@ -288,7 +372,8 @@ li {
   [vocaloid] auto
   [idol] auto
   [k-pop] auto
-  [space02] 1fr;
+	[space02] 1fr;
+	padding: 0 0 10vw;
 }
 
 .main_bg-color-1 {
@@ -310,20 +395,26 @@ li {
 }
 
 .main_twitter {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: grid;
+	grid-template-rows:
+  [h2] auto
+  [p] 0
+  [cont] auto;
+  row-gap: 1vw;
   grid-column: 2 / -2;
 	grid-row: twitter;
-	height: 80vw;
 	z-index: 5;
 }
 
 .main_news {
-  /* background: #d9482e; */
+	display: grid;
+	grid-template-rows:
+  [h2] auto
+  [p] 0
+  [cont] auto;
+  row-gap: 1vw;
   grid-column: 2 / -2;
   grid-row: news;
-	height: 30vw;
 	z-index: 5;
 }
 
@@ -349,20 +440,30 @@ li {
   background: rgba(255, 255, 255, 0.6);
   border: solid	1px	#fff4f2;;
   border-radius: 6px;
-	height: 80%;
+	grid-row: cont;
+	grid-column: 1 / -1;
+	height: 80vw;
 	margin: 0 auto;
 	width: 90%;
 	z-index: 200;
 }
 
+.news_cont {
+grid-row: cont;
+grid-column: 1 / -1;
+height: 30vw;
+width: 100%;
+}
+
 .main_about {
   background: #fff4f2;
-  border-radius: 6px 6px 6px 20vw;
-  box-shadow: 0 0 30px -8px;
+  border-radius: 6px 6px 6px 10vw;
+	box-shadow: 0 0 30px -8px;
   grid-column: 2 / -2;
   grid-row: about;
 	z-index: 5;
 }
+
 
 .main_about_h3 {
 	background-color: #fff4f2;
@@ -387,7 +488,7 @@ li {
 	padding: 0 2vw;
 }
 
-.main_about_cont {
+.main_about_cont2 {
   align-items: center;
   display: flex;
 	flex-flow: column;
@@ -414,7 +515,6 @@ li {
 }
 
 .main_activ {
-  /* background: #d9482e; */
   grid-column: 2 / -2;
   grid-row: activ;
 	height: 80vw;
@@ -450,11 +550,9 @@ li {
 
 .main_genre_p2 {
   color: #000;
-  font-size: 100%;
   font-weight: bold;
   mix-blend-mode:overlay;
   position: absolute;
-
 }
 
 .genre_cont {
@@ -462,7 +560,7 @@ li {
   grid-row: cont;
   display: flex;
   height: 35vw;
-  margin:  0 auto;
+	margin:  0 auto 5vw;
 }
 
 .main_genre_hiphop {
@@ -502,10 +600,10 @@ li {
    display: flex;
    grid-row: cont;
    font-size: 4vw;
-   height: 17vw;
+   height: 16vw;
    justify-content: center;
    position: relative;
-   width: 17vw;
+   width: 16vw;
 }
 
 .main_genre_div:before {
@@ -525,7 +623,7 @@ font-size: 3vw;
 
 .main_orange_box {
   background: #d9482e;
-  border-radius: 6px 6px 6px 20vw;
+  border-radius: 6px 6px 6px 10vw;
 	box-shadow: 0 20px 30px -15px;
 	display: grid;
 	row-gap: 1vw;
@@ -542,7 +640,7 @@ font-size: 3vw;
 
 .main_grid_top:after {
   background: #7b463c;
-  border-radius: 6px 6px 6px 20vw;
+  border-radius: 6px 6px 6px 10vw;
 	box-shadow: 0 0 30px -8px;
   grid-row: joinus / span 2;
 	content: '';
@@ -555,7 +653,7 @@ font-size: 3vw;
 
 .main_grid_sub:after {
 	background: #7b463c;
-  border-radius: 6px 6px 6px 20vw;
+  border-radius: 6px 6px 6px 10vw;
 	box-shadow: 0 0 30px -8px;
   grid-row: cont01 / span 2;
 	content: '';
@@ -592,10 +690,6 @@ font-size: 3vw;
   [h2] .3fr
   [p] .3fr
   [cont] auto;
-}
-
-.genre_cont {
-  margin:  0 auto 5vw;
 }
 
 .main_box_contact {
@@ -695,9 +789,9 @@ font-size: 3vw;
   grid-column: 2 / -2;
   grid-template-columns: repeat(5,1fr);
   grid-template-rows:
-  [h2] .3fr
+  [h2] auto
   [youtube] auto
-  [p] 1fr;
+  [p] auto;
   row-gap: 3vw;
 }
 
@@ -727,7 +821,7 @@ font-size: 3vw;
 }
 
 .main_genre_youtube {
-  grid-column: 2 / -2;
+  grid-column: 1 / -1;
   grid-row: youtube;
   height: 100%;
   /* width: 65.9vw; */
@@ -934,6 +1028,7 @@ right: 0;
 }
 
 .main_grid_top {
+	grid-template-columns: 10vw repeat(5,1fr) 10vw;
 	grid-template-rows:
 			[twitter-news] auto
       [about] auto
@@ -944,6 +1039,10 @@ right: 0;
       [joinus] auto
       [joinus_bg-color] 1vw
 			[space]auto;
+}
+
+.main_grid_sub {
+	grid-template-columns: 10vw repeat(10,1fr) 10vw;
 }
 
 /* header設定 */
@@ -965,10 +1064,13 @@ right: 0;
   justify-content: space-around;
   position: absolute;
   width: 100%;
-  z-index: 200;
+	z-index: 200;
+	height: 7vw;
+	top: 0;
 }
 
 .header_h1 {
+	display: block;
   grid-column: 2;
   grid-row: 1;
 }
@@ -997,6 +1099,10 @@ right: 0;
   color: #fff;
 }
 
+.header_icon {
+	display: none;
+}
+
 /* header_youtube設定 */
 .header_youtube {
 	display: block;
@@ -1015,7 +1121,7 @@ right: 0;
 /* PC設定 main */
 .main_h2_white {
 	font-size: 4vw;
-	/* height: 5vw; */
+	height: 5vw;
 }
 
 .main_h2_orange {
@@ -1033,18 +1139,26 @@ right: 0;
 .main_twitter {
   grid-column: 2 / span 2;
 	grid-row: twitter-news;
-	height: 55vw;
+}
+
+.main_twitter_cont {
+	height: 30vw;
 }
 
 .main_news {
   grid-column: 4 / -2;
   grid-row: twitter-news;
-	/* height: 400px; */
 	z-index: 5;
 }
 
-.main_about_cont {
-	flex-flow: row;
+.main_about_cont1 {
+	display: flex;
+}
+
+.main_about_about,
+.main_about_bucho {
+	margin: 5vw auto 10vw;
+	width: 40%;
 }
 
 .main_about_h3 {
@@ -1052,22 +1166,31 @@ right: 0;
 }
 
 .main_about_p {
-  font-size: 2vw;
-  line-height: 2;
+  font-size: 1vw;
+  line-height: 1.8;
   margin: 5vw 2vw;
   white-space: pre-wrap;
 }
 
 .main_genre {
-  display: grid;
-  grid-column: 2 / -2;
-  grid-row: genre;
-  grid-template-columns: repeat(5,1fr);
   grid-template-rows:
   [h2] auto
   [p] auto
-  [cont] 15vw;
+  [cont] auto;
   row-gap: 1vw;
+}
+
+.genre_cont {
+  grid-column: 1 / -1;
+  grid-row: cont;
+  display: flex;
+  height: 10vw;
+	margin:  5vw auto;
+	width: 95%;
+}
+
+.genre_sub {
+	margin: 3vw auto 10vw;
 }
 
 .main_genre_p1 {
@@ -1090,11 +1213,11 @@ right: 0;
    display: flex;
    grid-row: cont;
    font-size: 3vw;
-   height: 13vw;
+   height: 12vw;
    justify-content: center;
    margin: auto;
    position: relative;
-   width: 13vw;
+   width: 12vw;
 }
 
 
@@ -1109,5 +1232,32 @@ right: 0;
 	left: 0;
 }
 
+.main_activ {
+	height: 30vw;
+}
+
+.sub_orange_box_p1 {
+	grid-column: 2 / -2;
+	font-size: 1vw;
+  line-height: 1.8;
+}
+
+.main_genre_explain_p1 {
+	font-size: 1vw;
+  line-height: 1.8;
+}
+
+.main_genre_youtube {
+  grid-column: 2 / -2;
+}
+
+.main_genre_vocaloid{
+	font-size: 2.2vw;
+}
+
+.contact_label {
+	font-size: 1.2vw;
+	grid-column: 2;
+}
 
 }

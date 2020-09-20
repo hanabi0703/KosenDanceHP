@@ -8,9 +8,19 @@
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+		<script src="script.js"></script>
+		<script type="text/javascript" src="js/script.js" defer="defer"></script>
   </head>
   <body class="page_top">
+		<div id="loader_bg" class="is-hide">
+			<div id="loader" class="is-hide">
+					<img class="loader_logo" src="img/LARGO_logo.png">
+						<p>
+							NOW LOADING
+					</p>
+					<div class="loader"></div>
+		</div>
+		</div>
     <div class="wrap_grid_sub">
       <header class="header_grid_sub header_bg_sub">
         <section class="header_header_menu">
@@ -24,7 +34,7 @@
             <li class="header_nav_li header_nav_home"><a class="header_nav_a" href="index.html"><i class="fas fa-home header_icon"></i>HOME</a></li>
             <li class="header_nav_li header_nav_movie"><a class="header_nav_a" href=./movie.html><i class="fab fa-youtube-square header_icon"></i>MOVIE</a></li>
             <li class="header_nav_li header_nav_genre"><a class="header_nav_a" href=./genre.html><i class="fas fa-users header_icon"></i>GENRE</a></li>
-            <li class="header_nav_li header_nav_contact"><a class="header_nav_a" href="./contact.html"><i class="far fa-envelope header_icon header_icon_active"></i>CONTACT</a></li>
+            <li class="header_nav_li header_nav_contact"><a class="header_nav_a header_a_active" href="./contact.html"><i class="far fa-envelope header_icon header_icon_active"></i>CONTACT</a></li>
           </ul>
         </nav>
         </section>

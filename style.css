@@ -25,10 +25,111 @@ a:hover, a:active,a:visited {
 li {
   list-style: none;
 }
-/* PCスマホ共通設定 */
+/* スマホ設定 */
 /* ***********************************************************
-* #header
+* 
 * *********************************************************** */
+
+/* ローディング画面 */
+/* 非表示 */
+.is-hide {
+	display: none;
+}
+
+/* LOADING */
+#loader_bg {
+background: #000;
+height: 100%;
+left: 0;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 400;
+}
+
+#loader {
+height: 50%;
+left: 25%;
+margin: auto;
+position: fixed;
+top: 25%;
+width: 50%;
+display: inline-flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+#loader p {
+	color: #eb7437;
+	font-size: 5vw;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.loader_logo {
+	display: inline-block;
+	margin: auto;
+	width: 40vw;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #eb7437;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
 
 /* ページ設定_TOP */
 .wrap_grid_top {
@@ -102,7 +203,7 @@ li {
 	position: fixed;
 	height: 20vw;
   width: 100%;
-	z-index: 200;
+	z-index: 500;
 	bottom: 0;
 }
 
@@ -130,8 +231,12 @@ display: inline-flex;
 	font-size: 8vw;
 }
 
+.header_a_active {
+  filter: drop-shadow( 0 0 4px #eb7437);
+}
+
 .header_icon_active {
-  filter: drop-shadow( 0 0 5px #eb7437);
+  filter: drop-shadow( 0 0 1px #eb7437);
 }
 
 .header_nav_home {
@@ -731,6 +836,7 @@ font-size: 3vw;
 }
 
 .main_movie_sub {
+	display: none;
   width: 100%;
   height: 30%;
 }
@@ -761,15 +867,10 @@ font-size: 3vw;
 }
 
 .sub_slider {
-  margin: 3vw auto 0;
-  width: 70%;
-	height: 30%;
+display: none;
 }
 
 .sub_slider_li {
-  /* padding: 0 3vw; */
-  margin: 0 4vw;
-  width: 16.7vw;
 }
 
 .slide_main_youtube {
@@ -1024,9 +1125,15 @@ right: 0;
   grid-row: footer4;
   justify-content: center;
 }
+/* PC設定 */
+/* ***********************************************************
+* 
+* *********************************************************** */
+
+
 @media screen and (min-width:768px){
 
-	/* grid設定 */
+	/* PC設定　grid設定 */
 .wrap_grid_top {
 	grid-template-rows: 47vw 1fr 40vw;
 }
@@ -1049,7 +1156,7 @@ right: 0;
 	grid-template-columns: 10vw repeat(10,1fr) 10vw;
 }
 
-/* header設定 */
+/* PC設定　header設定 */
 .header_header_grid {
 	display: grid;
 	grid-template-columns: 3vw repeat(5,1fr) 3vw;
@@ -1107,7 +1214,7 @@ right: 0;
 	display: none;
 }
 
-/* header_youtube設定 */
+/* PC設定　header_youtube設定 */
 .header_youtube {
 	display: block;
   grid-column: 9 / span 3;
@@ -1246,6 +1353,26 @@ right: 0;
   line-height: 1.8;
 }
 
+/* PC設定　subページ　movie */
+
+.main_movie_sub {
+	display: block;
+  width: 100%;
+  height: 30%;
+}
+
+.sub_slider {
+	/* display: block; */
+  margin: 3vw auto 0;
+  width: 70%;
+	height: 30%;
+}
+
+.sub_slider_li {
+  /* padding: 0 3vw; */
+  margin: 0 4vw;
+  width: 16.7vw;
+}
 .main_genre_explain_p1 {
 	font-size: 1vw;
   line-height: 1.8;

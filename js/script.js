@@ -1,3 +1,5 @@
+/*----- ローディング画面設定　-----*/
+
 var bg = $('#loader_bg'),
     loader = $('#loader');
 /* ローディング画面の非表示を解除 */
@@ -15,3 +17,33 @@ function stopload(){
     bg.delay(900).fadeOut(800);
     loader.delay(900).fadeOut(300);
 }
+
+/*----- スクロールイン設定　-----*/
+
+//ウィンドウの高さを取得
+var window_h = $(window).height();
+ 
+//スクロールイベント
+$(window).on("scroll", function() {
+  //スクロール量を取得
+  var scroll_top = $(window).scrollTop();
+　
+ //eachにより各ボックスの処理
+  $(".fadein_out").each(function() {
+　　//各ボックスのトップの位置
+		var elem_pos = $(this).offset().top;
+		
+		//どのタイミングでフェードインさせるか
+		if (scroll_top >= elem_pos - window_h+500) {
+			$(this).addClass("fadein_in");
+		} else {
+			// $(this).removeClass("fadein_in");
+		}
+  });
+})
+
+$(window).on("load", function() {
+	$(".slidein_out").each(function() {
+		$(this).addClass("slidein_in");
+	})
+});

@@ -25,6 +25,11 @@ a:hover, a:active,a:visited {
 li {
   list-style: none;
 }
+
+p, h3 {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium";
+	font-weight: normal;
+	}
 /* スマホ設定 */
 /* ***********************************************************
 * 
@@ -195,6 +200,9 @@ justify-content: space-around;
   height: 100vh;
 }
 
+.wrap_grid_movie {
+	height: auto;
+}
 
 /* header_HOMEの設定 */
 
@@ -776,13 +784,12 @@ font-size: 3vw;
 	display: grid;
 	row-gap: 1vw;
 	grid-row: genre;
-	grid-template-columns: repeat(5,1fr);
+	grid-template-columns: 2vw repeat(5,1fr) 2vw;
 	grid-template-rows:
   [h2] .5fr
   [p] .5fr
   [cont] 3fr;
   grid-column: 2 / -2;
-	/* height: 60vw; */
 	z-index: 30;
 }
 
@@ -853,78 +860,101 @@ font-size: 3vw;
 
 .main_movie {
   grid-row: cont;
-  grid-column: 1 / -1;
-  height: 80%;
+  grid-column: 2 / -2;
+  height: 100%;
 }
 
 .main_movie_main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  height: 70%;
-}
-
-.movie_year_space {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main_movie_space {
-  width: 10%;
-}
-
-.main_movie_sub {
-	display: none;
-  width: 100%;
-  height: 30%;
-}
-
-.movie_year_ul {
-  /* margin: 10% auto auto; */
-  width: 50%;
-  height: 70%;
-}
-
-.movie_year_li {
-  color: #fff4f2;
-  font-size: 2vw;
-  margin: 0 0 3vw;
-  cursor: pointer;
+  /* height: 70%; */
 }
 
 /* MOVIEページのslick設定 */
 
-.main_slider {
-	width: 70%;
+.main_movie_ul {
+	width: 100%;
 	height: 100%;
 }
 
-.slide_cont_li {
-	width: 65.9vw;
-	/* height: 41vw; */
-}
-
-.sub_slider {
-display: none;
-}
-
-.sub_slider_li {
-}
-
-.slide_main_youtube {
-	height: 37.1vw;
+.main_movie_li {
 	width: 100%;
-  z-index: 100;
+	height: 100%;
+	display: inline-flex; 
 }
 
-.slide_sub_youtube {
+.main_movie_div {
+	margin: auto auto 0 auto;
+  /* height: 100%; */
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* .main_movie_div:before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+} */
+
+/* .main_youtube_img {
+	display: block;
+  position: absolute;
+  height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+} */
+
+.main_youtube_h3 {
+	width: 45%;
+	color: #fff4f2;
+	font-size: 3.5vw;
+}
+
+.yt {
+	position:relative;
+	/* width: 56.25%; */
+	padding-bottom: 56.25%;
+}
+
+/* .yt:before {
+  content: '';
+  display: block;
   width: 100%;
-  height: 9.38vw;
-  pointer-events: none;
+  padding-bottom: 56.25%;
+} */
+
+.yt_play {
+	position: absolute;
+}
+.yt_play:hover {
+  cursor:pointer;
+}
+.yt_play::before { /* YouTubeアイコン */
+  position: absolute;
+  background: url(./img/yt_icon_mono_light.png);
+  content: "";
+  background-size: 100%;
+  width: 70px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  opacity: .90;
+	transition:.5s;
+}
+.yt_play:hover::before { /* YouTubeアイコン */
   cursor: pointer;
-  }
+	background-image:url(./img/yt_icon_rgb.png);
+}
+
+.yt_iframe {
+	position: absolute;
+}
 
   /* GENREページ設定 */
 
@@ -968,7 +998,6 @@ display: none;
   grid-column: 1 / -1;
   grid-row: youtube;
   height: 100%;
-  /* width: 65.9vw; */
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -986,11 +1015,11 @@ display: none;
   position: absolute;
   height: 100%;
   /* margin: 0 auto; */
-width: 100%;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
   
 .sub_orange_box_p1 {

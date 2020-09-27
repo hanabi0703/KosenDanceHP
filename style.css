@@ -867,6 +867,9 @@ font-size: 3vw;
 /* ドロップダウンメニュー */
 
 .main_movie_select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	background-color: #d9482e;
 	border: none;
 	border-radius: 5px;
@@ -874,7 +877,6 @@ font-size: 3vw;
 	width: 25vw;
 	height: 10vw;
 	padding: 1vw;
-	appearance: button;
 }
 
 .main_movie_select:visited {

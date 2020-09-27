@@ -874,6 +874,7 @@ font-size: 3vw;
 	width: 25vw;
 	height: 10vw;
 	padding: 1vw;
+	appearance: button;
 }
 
 .main_movie_select:visited {

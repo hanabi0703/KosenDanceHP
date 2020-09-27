@@ -29,13 +29,13 @@ $(window).on("scroll", function() {
   var scroll_top = $(window).scrollTop();
 　
  //eachにより各ボックスの処理
-  $(".fadein_out").each(function() {
+  $(".fadein_bf").each(function() {
 　　//各ボックスのトップの位置
 		var elem_pos = $(this).offset().top;
 		
 		//どのタイミングでフェードインさせるか
-		if (scroll_top >= elem_pos - window_h+500) {
-			$(this).addClass("fadein_in");
+		if (scroll_top >= elem_pos - window_h/2) {
+			$(this).addClass("fadein_af");
 		} else {
 			// $(this).removeClass("fadein_in");
 		}
@@ -45,7 +45,6 @@ $(window).on("scroll", function() {
 
 /* ロード後のふわっと表示用 */
 $(window).on("load", function() {
-	// location.href = 'https://www.sejuku.net/blog';
 	$(".slidein_out").each(function() {
 		$(this).addClass("slidein_in");
 	})

@@ -26,7 +26,7 @@ li {
   list-style: none;
 }
 
-p, h3 {
+h3 {
 	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium";
 	font-weight: normal;
 	}
@@ -137,18 +137,21 @@ justify-content: space-around;
 
 .slidein_out {
 	height: 0;
-	/* opacity: 0; */
 	transition: all .9s 0.5s ease;
 }
 
-.slidein_out_delay {
+.slidein_out_delay01 {
 	transition: all .9s 1s ease;
 }
 
-.slidein_out_twitter {
+.slidein_out_delay02 {
+	transition: all .9s 1.1s ease;
+}
+
+.slidein_bf_mvcont {
 	height: 100%;
 	opacity: 0;
-	transition: all 1s 1.5s ease;
+	transition: all .5s 1.8s ease;
 }
 
 .slidein_out_news {
@@ -162,13 +165,13 @@ justify-content: space-around;
 	opacity:1;
 }
 
-.fadein_out {
+.fadein_bf {
 	opacity: 0;
 	transform: translateY(-50px);
 	transition: opacity 1s,transform 0.5s;
 }
 
-.fadein_in {
+.fadein_af {
   opacity:1;
   transform:translateX(0);
 }
@@ -522,7 +525,8 @@ display: inline-flex;
   grid-template-rows:
   [space01] 1fr
   [cont01] auto
-  [cont01_bg-color] .1vw
+	[cont01_bg-color] .1vw
+	[scroll] 7vw
   [hiphop] auto
   [krump] auto
   [vocaloid] auto
@@ -781,16 +785,18 @@ font-size: 3vw;
   background: #d9482e;
   border-radius: 6px 6px 6px 10vw;
 	box-shadow: 0 20px 30px -15px;
+  grid-column: 2 / -2;
+	z-index: 30;
+}
+
+.main_orange_box_cont {
 	display: grid;
 	row-gap: 1vw;
-	grid-row: genre;
-	grid-template-columns: 2vw repeat(5,1fr) 2vw;
 	grid-template-rows:
   [h2] .3fr
   [p] .3fr
-  [cont] auto;
-  grid-column: 2 / -2;
-	z-index: 30;
+	[cont] auto;
+	grid-template-columns: 2vw repeat(5,1fr) 2vw;
 }
 
 .main_grid_top:after {
@@ -806,13 +812,11 @@ font-size: 3vw;
   z-index: 10;
 }
 
-.main_grid_sub:after {
+.main_orange_box_bg {
 	background: #7b463c;
   border-radius: 6px 6px 6px 10vw;
 	box-shadow: 0 0 30px -8px;
   grid-row: cont01 / span 2;
-	content: '';
-	height: 100%;
 	grid-column: 2 / -2;
 	position: absolute;
 	width: 100%;
@@ -825,10 +829,6 @@ font-size: 3vw;
   grid-row: cont01;
 }
 
-.main_box_movie {
-	height: auto;
-}
-
 .main_joinus {
   grid-row: joinus;
 }
@@ -836,7 +836,6 @@ font-size: 3vw;
 .main_joinus_bg {
   grid-row: joinus / span 2;
 }
-
 
 .main_box_genre {
 	grid-row: cont01;
@@ -866,6 +865,18 @@ font-size: 3vw;
 
 /* ドロップダウンメニュー */
 
+.dropdownmenu {
+	position: relative;
+	width: 25vw;
+}
+
+.arrow_down {
+	color: #fff4f2;
+	position: absolute;
+	top: 30%;
+	right: 15%;
+}
+
 .main_movie_select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -874,12 +885,13 @@ font-size: 3vw;
 	border: none;
 	border-radius: 5px;
 	color: #fff4f2;
-	width: 25vw;
+	width: 100%;
 	height: 10vw;
 	padding: 1vw;
+	position: relative;
 }
 
-.main_movie_select:visited {
+.main_movie_option:hover {
 	background-color: #eb7437;
 
 }
@@ -993,6 +1005,23 @@ font-size: 3vw;
   row-gap: 3vw;
 }
 
+.scroll_it {
+	display: inline-flex;
+	color: #d9482e;
+	grid-column: 2 / -2;
+	grid-row: scroll;
+	justify-content: space-between;
+	margin: auto;
+	width: 20%;
+	height: 100%;
+	font-size: 4vw;
+	font-weight: bold;
+}
+
+.scroll_it_arrow {
+	color: #d9482e;
+}
+
 .genre_explain_hiphop {
   grid-row: hiphop;
 }
@@ -1015,7 +1044,7 @@ font-size: 3vw;
   
 .sub_orange_box_h2 {
   grid-column: 1 / -1;
-  grid-row: h2;
+	grid-row: h2;
 }
 
 .main_genre_youtube {

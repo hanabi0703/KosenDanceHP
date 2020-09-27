@@ -59,59 +59,59 @@ $('select').change(function () {
 });
 
 
-/* youtube表示用 */
-$(function (){
-	var srcs = [];
-	var images = [];
-	var heights = [];
-	var widths = [];
-	var thumbs = [];
+// /* youtube表示用 */
+// $(function (){
+// 	var srcs = [];
+// 	var images = [];
+// 	var heights = [];
+// 	var widths = [];
+// 	var thumbs = [];
 	
-	// 全てのiframeタグに対して処理を実行
-	$('iframe.fastyt').each(function(index, element) {
-		// 属性を配列に格納
-		srcs[index] = $(this).attr('data-src');
-		heights[index] = $(this).attr('height');
-		widths[index] = $(this).attr('width');
-		thumbs[index] = $(this).attr('data-thumbnail');
-		maxWidth = getAncestorWidth($(this));
+// 	// 全てのiframeタグに対して処理を実行
+// 	$('iframe.fastyt').each(function(index, element) {
+// 		// 属性を配列に格納
+// 		srcs[index] = $(this).attr('data-src');
+// 		heights[index] = $(this).attr('height');
+// 		widths[index] = $(this).attr('width');
+// 		thumbs[index] = $(this).attr('data-thumbnail');
+// 		maxWidth = getAncestorWidth($(this));
 	
-		// 取りうる最大幅を超えている場合はそこまでにする．
-		if (maxWidth < widths[index]) {
-			heights[index] = Math.floor(heights[index] * maxWidth / widths[index]);
-			widths[index] = Math.floor(maxWidth);
-		}
+// 		// 取りうる最大幅を超えている場合はそこまでにする．
+// 		if (maxWidth < widths[index]) {
+// 			heights[index] = Math.floor(heights[index] * maxWidth / widths[index]);
+// 			widths[index] = Math.floor(maxWidth);
+// 		}
 		
-		// URL から動画 id のみを取得して文字連結をしてサムネイルを取得
-		var id = srcs[index].match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
-		if (thumbs[index]) {
-			images[index] = thumbs[index];
-		} else {
-			images[index] = 'http://i.ytimg.com/vi/' + id + '/mqdefault.jpg';
-		}
+// 		// URL から動画 id のみを取得して文字連結をしてサムネイルを取得
+// 		var id = srcs[index].match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
+// 		if (thumbs[index]) {
+// 			images[index] = thumbs[index];
+// 		} else {
+// 			images[index] = 'http://i.ytimg.com/vi/' + id + '/mqdefault.jpg';
+// 		}
 	
-		// iframeをサムネイル画像に置換
-		$(this).after('<div class="yt"><div class="yt_play"><img loading="lazy" src="' + images[index] + '" class="movie" width="' + widths[index] + '" height="' + heights[index] + '"></div></div>').remove();
-		// $('.yt').eq([index]).css("width", widths[index]);
-		// $('.yt').eq([index]).css("height", heights[index]);
-	});
+// 		// iframeをサムネイル画像に置換
+// 		$(this).after('<div class="yt"><div class="yt_play"><img loading="lazy" src="' + images[index] + '" class="movie" width="' + widths[index] + '" height="' + heights[index] + '"></div></div>').remove();
+// 		// $('.yt').eq([index]).css("width", widths[index]);
+// 		// $('.yt').eq([index]).css("height", heights[index]);
+// 	});
 	
-	// $('.yt_play').each(function(index, element) {
-	// 	// サムネイルがクリックされた時の処理
-	// 	$(this).click(function (){
-	// 		// iframeに置換
-	// 		var autoplay;
-	// 		if (0 < srcs[index].indexOf("?")) {
-	// 			autoplay = '&';
-	// 		} else {
-	// 			autoplay = '?';
-	// 		}
-	// 		autoplay += "autoplay=1";
+// 	// $('.yt_play').each(function(index, element) {
+// 	// 	// サムネイルがクリックされた時の処理
+// 	// 	$(this).click(function (){
+// 	// 		// iframeに置換
+// 	// 		var autoplay;
+// 	// 		if (0 < srcs[index].indexOf("?")) {
+// 	// 			autoplay = '&';
+// 	// 		} else {
+// 	// 			autoplay = '?';
+// 	// 		}
+// 	// 		autoplay += "autoplay=1";
 	
-	// 		$(this).replaceWith('<iframe class="yt_iframe" src="' + srcs[index] + autoplay + '" allow="autoplay" frameborder="0" width="' + widths[index] + '" height="' + heights[index] + '" allowfullscreen></iframe>');
-	// 	});
-	// });
-});
+// 	// 		$(this).replaceWith('<iframe class="yt_iframe" src="' + srcs[index] + autoplay + '" allow="autoplay" frameborder="0" width="' + widths[index] + '" height="' + heights[index] + '" allowfullscreen></iframe>');
+// 	// 	});
+// 	// });
+// });
 	
 function getAncestorWidth(element) {
 	if (element.parent() === undefined) {

@@ -989,6 +989,11 @@ font-size: 3vw;
 	pointer-events: none;
 }
 
+.main_youtube_img {
+	height: 100%;
+	width: 100%;
+}
+
 .yt_iframe {
 	position: absolute;
 }

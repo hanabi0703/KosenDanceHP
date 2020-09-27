@@ -96,21 +96,21 @@ $(function (){
 		// $('.yt').eq([index]).css("height", heights[index]);
 	});
 	
-	$('.yt_play').each(function(index, element) {
-		// サムネイルがクリックされた時の処理
-		$(this).click(function (){
-			// iframeに置換
-			var autoplay;
-			if (0 < srcs[index].indexOf("?")) {
-				autoplay = '&';
-			} else {
-				autoplay = '?';
-			}
-			autoplay += "autoplay=1";
+	// $('.yt_play').each(function(index, element) {
+	// 	// サムネイルがクリックされた時の処理
+	// 	$(this).click(function (){
+	// 		// iframeに置換
+	// 		var autoplay;
+	// 		if (0 < srcs[index].indexOf("?")) {
+	// 			autoplay = '&';
+	// 		} else {
+	// 			autoplay = '?';
+	// 		}
+	// 		autoplay += "autoplay=1";
 	
-			$(this).replaceWith('<iframe class="yt_iframe" src="' + srcs[index] + autoplay + '" allow="autoplay" frameborder="0" width="' + widths[index] + '" height="' + heights[index] + '" allowfullscreen></iframe>');
-		});
-	});
+	// 		$(this).replaceWith('<iframe class="yt_iframe" src="' + srcs[index] + autoplay + '" allow="autoplay" frameborder="0" width="' + widths[index] + '" height="' + heights[index] + '" allowfullscreen></iframe>');
+	// 	});
+	// });
 });
 	
 function getAncestorWidth(element) {
@@ -125,4 +125,20 @@ function getAncestorWidth(element) {
 	}
 	return width;
 }
-		
+
+/* youtube再生用2 */
+
+(function () {
+  if ($(".js-modal-video").length) { //クラス名js-modal-videoがあれば以下を実行
+    $(".js-modal-video").modalVideo({
+      channel: "youtube",
+      youtube: {
+        rel: 0, //関連動画の指定
+        autoplay: 0, //自動再生の指定
+        controls: 0, //コントロールさせるかどうかの指定
+      },
+    });
+  }
+})();
+
+// $(".js-modal-btn").modalVideo();

@@ -986,6 +986,7 @@ font-size: 3vw;
 .yt_play:hover::before { /* YouTubeアイコン */
   cursor: pointer;
 	background-image:url(./img/yt_icon_rgb.png);
+	pointer-events: none;
 }
 
 .yt_iframe {

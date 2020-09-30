@@ -73,14 +73,17 @@
 						<p class="sub_orange_box_p1">
 							お問い合わせ内容をご入力の上、「送信」ボタンをクリックしてください。
 						</p>
-						<form class="main_contact_form main_contact_cont" action="confirm.php" method="post" name="form" onsubmit="return validate()">
+						<form class="main_contact_form main_contact_cont" action="confirm.php" method="post" name="form">
 										<label class="contact_label contact_name">お名前：</label>
-										<input class="contact_input contact_name" type="text" name="name" placeholder="例）山田太郎" value="">
+										<input class="contact_input contact_name" id="name" type="text" name="name" placeholder="例）山田太郎" value=""  required="required">
 										<label class="contact_label contact_mail">メールアドレス：</label>
-										<input class="contact_input contact_mail" type="text" name="email" placeholder="例）guest@example.com" value="">
+										<input class="contact_input contact_mail" id="email" type="text" name="email" placeholder="例）guest@example.com" value="" required="required">
 										<label class="contact_label contact_content">お問い合わせ内容：</label>
-										<textarea class="contact_input contact_content" name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
-								<button class="contact_button" type="submit">送信</button>
+										<textarea class="contact_input contact_content" id="content" name="content" rows="5" placeholder="お問合せ内容を入力" required="required"></textarea>
+										<input type="hidden" id="token" name="token" value="1234567" />
+								<button class="contact_button" type="submit" name="submit_buton" >送信</button>
+								<!-- <input   class="contact_button" name="submit_buton" type="submit" id="submit_button" value="送信"> -->
+
 						</form>
 					</div>
 				</section>

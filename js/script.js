@@ -54,8 +54,8 @@ $(window).on("load", function() {
 $('select').change(function () {
   var val = $('select option:selected').val();
   if (val == 'select') return;
-  $('ul.main_movie_ul').removeClass("display_on");
-  $('ul#' + val ).addClass("display_on");
+  $('div.main_movie_target').removeClass("display_on");
+  $('div#' + val ).addClass("display_on");
 });
 
 

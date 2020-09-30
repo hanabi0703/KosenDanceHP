@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>L.A.R.G.O -CONTACT-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Sriracha|Ubuntu&display=swap" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<script type="text/javascript" src="js/script.js" defer="defer"></script>
+  </head>
+  <body class="page_top">
+		<div id="loader_bg" class="is-hide">
+			<div id="loader" class="is-hide">
+					<img class="loader_logo" src="img/LARGO_logo.png">
+						<p>
+							NOW LOADING
+					</p>
+					<div class="loader"></div>
+		</div>
+		</div>
+    <div class="wrap_grid_sub">
+      <header class="header_grid_sub header_bg_sub slidein_out">
+        <section class="header_header_menu">
+        <h1 class="header_h1">
+          <a class="header_logo_a" href="index.html">
+            <img class="header_h1_img" src="img/LARGO_logo.png">
+          </a>
+        </h1>
+        <nav class="header_nav">
+          <ul class="header_nav_ul">
+            <li class="header_nav_li header_nav_home"><a class="header_nav_a" href="index.html"><i class="fas fa-home header_icon"></i>HOME</a></li>
+            <li class="header_nav_li header_nav_movie"><a class="header_nav_a" href=./movie.html><i class="fab fa-youtube-square header_icon"></i>MOVIE</a></li>
+            <li class="header_nav_li header_nav_genre"><a class="header_nav_a" href=./genre.html><i class="fas fa-users header_icon"></i>GENRE</a></li>
+            <li class="header_nav_li header_nav_contact"><a class="header_nav_a header_a_active" href="./contact.html"><i class="far fa-envelope header_icon header_icon_active"></i>CONTACT</a></li>
+          </ul>
+        </nav>
+        </section>
+        <div class="header_mv mv_sub mv_img_sub">
+        </div>
+        <div class="header_mv_bg mv_bg_sub">
+        </div>
+        <div class="header_logo header_logo_sub">
+          <img class="header_logo_img" src="img/LARGO_logo.png">
+        </div>
+        <section class="header_sns_link header_sns_sub">
+					<p>送信完了！</p>
+        </section>
+      </header>
+      <main class="main_grid_sub">
+        <section class="main_orange_box main_box_contact sub_orange_box slidein_out slidein_out_delay02">
+					<div class="main_orange_box_cont slidein_bf_mvcont slidein_out">
+						<h2 class="main_h2_white sub_orange_box_h2">CONTACT</h2>
+						<p class="sub_orange_box_p1">
+							お問い合わせ内容をご入力の上、「送信」ボタンをクリックしてください。
+						</p>
+						<form class="main_contact_form main_contact_cont" action="confirm.php" method="post" name="form" onsubmit="return validate()">
+										<label class="contact_label contact_name">お名前：</label>
+										<input class="contact_input contact_name" type="text" name="name" placeholder="例）山田太郎" value="">
+										<label class="contact_label contact_mail">メールアドレス：</label>
+										<input class="contact_input contact_mail" type="text" name="email" placeholder="例）guest@example.com" value="">
+										<label class="contact_label contact_content">お問い合わせ内容：</label>
+										<textarea class="contact_input contact_content" name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
+								<button class="contact_button" type="submit">送信</button>
+						</form>
+					</div>
+				</section>
+				<div class="main_orange_box_bg slidein_out slidein_out_delay01"></div>
+      </main>
+      <footer class="footer_footer">
+        <div class="footer_logo">
+          <a class="footer_logo_a" href="index.html">
+          <img class="footer_logo_img" src="img/LARGO_logo.png">
+          </a>
+        </div>
+        <div class="footer_sns_list">
+					<ul class="sns_list">
+						<li class="">
+							<a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+								<i class="fab fa-line footer_sns_icon"></i>
+						</a></li>
+						<li class="">
+							<a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+								<i class="fab fa-youtube footer_sns_icon"></i>
+						</a></li>
+						<li class="">
+							<a class="sns_insta sns_a" href="#">
+								<i class="fab fa-instagram footer_sns_icon"></i>
+						</a></li>
+						<li class="">
+							<a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+								<i class="fab fa-twitter footer_sns_icon"></i>
+						</a></li>
+					</ul>
+        </div>
+        <nav class="footer_nav">
+					<ul class="footer_nav_list">
+						<li class="footer_nav_li"><a class="footer_nav_a" href="index.html">HOME</a></li>
+						<li class="footer_nav_li"><a class="footer_nav_a" href="./movie.html">MOVIE</a></li>
+						<li class="footer_nav_li"><a class="footer_nav_a" href="./genre.html">GENRE</a></li>
+						<li class="footer_nav_li"><a class="footer_nav_a" href="./contact.html">CONTACT</a></li>
+					</ul>
+        </nav>
+      <p class="footer_footer_p">© 2020 HANABI</p>
+    </footer>
+    </div>
+  </body>
+</html>

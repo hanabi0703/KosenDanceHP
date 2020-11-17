@@ -12,17 +12,17 @@
 		<script type="text/javascript" src="js/script.js" defer="defer"></script>
   </head>
   <body class="page_top">
-		<div id="loader_bg" class="is-hide">
+		<!-- <div id="loader_bg" class="is-hide">
 			<div id="loader" class="is-hide">
 					<img class="loader_logo" src="img/LARGO_logo.png">
 						<p>
 							NOW LOADING
 					</p>
 					<div class="loader"></div>
-		</div>
-		</div>
+			</div>
+		</div> -->
     <div class="wrap_grid_sub">
-      <header class="header_grid_sub header_bg_sub slidein_out">
+      <header class="header_grid_sub header_bg_sub">
         <section class="header_header_menu">
         <h1 class="header_h1">
           <a class="header_logo_a" href="index.html">
@@ -46,28 +46,36 @@
           <img class="header_logo_img" src="img/LARGO_logo.png">
         </div>
         <section class="header_sns_link header_sns_sub">
-					<p>送信完了！</p>
+          <ul class="sns_list">
+            <li class="sns_bg">
+              <a class="sns_line sns_a" href="https://line.me/R/home/public/main?id=181ktmso">
+              <img  class=" sns_logo" src="img/Line_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_youtube sns_a" href="https://www.youtube.com/channel/UCdNxuL_7MQ8UFYm3wC_cF-w">
+              <img  class=" sns_logo" src="img/youtube.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_insta sns_a" href="#">
+              <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
+            </a></li>
+            <li class="sns_bg">
+              <a class="sns_twitter sns_a" href="https://twitter.com/tnct_dance2020">
+              <img  class=" sns_logo" src="img/Twitter_logo.png" alt="">
+            </a></li>
+          </ul>
         </section>
       </header>
       <main class="main_grid_sub">
-        <section class="main_orange_box main_box_contact sub_orange_box slidein_out slidein_out_delay02">
+        <section class="main_orange_box main_box_contact sub_orange_box">
 					<div class="main_orange_box_cont slidein_bf_mvcont slidein_out">
 						<h2 class="main_h2_white sub_orange_box_h2">CONTACT</h2>
 						<p class="sub_orange_box_p1">
-							お問い合わせ内容をご入力の上、「送信」ボタンをクリックしてください。
+							送信完了！
 						</p>
-						<form class="main_contact_form main_contact_cont" action="confirm.php" method="post" name="form" onsubmit="return validate()">
-										<label class="contact_label contact_name">お名前：</label>
-										<input class="contact_input contact_name" type="text" name="name" placeholder="例）山田太郎" value="">
-										<label class="contact_label contact_mail">メールアドレス：</label>
-										<input class="contact_input contact_mail" type="text" name="email" placeholder="例）guest@example.com" value="">
-										<label class="contact_label contact_content">お問い合わせ内容：</label>
-										<textarea class="contact_input contact_content" name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
-								<button class="contact_button" type="submit">送信</button>
-						</form>
 					</div>
 				</section>
-				<div class="main_orange_box_bg slidein_out slidein_out_delay01"></div>
+				<div class="main_orange_box_bg"></div>
       </main>
       <footer class="footer_footer">
         <div class="footer_logo">

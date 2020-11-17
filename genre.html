@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Sriracha|Ubuntu&display=swap" rel="stylesheet">
 		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="./modal-video.min.css" />
 		<script
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -39,7 +40,7 @@
         </h1>
         <nav class="header_nav">
           <ul class="header_nav_ul">
-            <li class="header_nav_li header_nav_home"><a class="header_nav_a" href="index.html"><i class="fas fa-home header_icon"></i><div>HOME</div></a></li>
+            <li class="header_nav_li header_nav_home"><a class="header_nav_a" href="index.html"><i class="fas fa-home header_icon"></i>HOME</a></li>
             <li class="header_nav_li header_nav_movie"><a class="header_nav_a" href=./movie.html><i class="fab fa-youtube-square header_icon"></i>MOVIE</a></li>
             <li class="header_nav_li header_nav_genre"><a class="header_nav_a header_a_active" href=./genre.html><i class="fas fa-users header_icon header_icon_active"></i>GENRE</a></li>
             <li class="header_nav_li header_nav_contact"><a class="header_nav_a" href="./contact.html"><i class="far fa-envelope header_icon"></i>CONTACT</a></li>
@@ -64,7 +65,7 @@
               <img  class=" sns_logo" src="img/youtube.png" alt="">
             </a></li>
             <li class="sns_bg">
-              <a class="sns_insta sns_a" href="#">
+              <a class="sns_insta sns_a" href="https://instagram.com/tnct_largo?igshid=1nckys5xc5xn8">
               <img  class=" sns_logo" src="img/Instagram_logo.png" alt="">
             </a></li>
             <li class="sns_bg">
@@ -84,20 +85,30 @@
 							また、ここになくてもあなたのやりたいジャンルを作ることもできちゃいます！
 						</p>
 						<div class="genre_cont genre_sub">
-							<div class="main_genre_hiphop main_genre_div">
-								<p class="main_genre_p2">HIPHOP</p>
+							<div class="main_genre_div_parent genre_pos_start">
+								<div class="main_genre_hiphop main_genre_div_child">
+									<a href="#hiphop" class="genre_cont_a"><p class="main_genre_p2">HIPHOP</p></a>
+								</div>
 							</div>
-							<div class="main_genre_krump main_genre_div">
-								<p class="main_genre_p2">KRUMP</p>
+							<div class="main_genre_div_parent genre_pos_end">
+								<div class="main_genre_krump main_genre_div_child">
+									<a href="#krump" class="genre_cont_a"><p class="main_genre_p2">KRUMP</p></a>
+								</div>
 							</div>
-							<div class="main_genre_vocaloid main_genre_div">
-								<p class="main_genre_p2">VOCALOID</p>
+							<div class="main_genre_div_parent genre_pos_start">
+								<div class="main_genre_vocaloid main_genre_div_child">
+									<a href="#vocaloid" class="genre_cont_a"><p class="main_genre_p2">VOCALOID</p></a>
+								</div>
 							</div>
-							<div class="main_genre_idol main_genre_div">
-								<p class="main_genre_p2">IDOL</p>
+							<div class="main_genre_div_parent genre_pos_end">
+								<div class="main_genre_idol main_genre_div_child">
+									<a href="#idol" class="genre_cont_a"><p class="main_genre_p2">IDOL</p></a>
+								</div>
 							</div>
-							<div class="main_genre_k-pop main_genre_div">
-								<p class="main_genre_p2">K-POP</p>
+							<div class="main_genre_div_parent genre_pos_start">
+								<div class="main_genre_k-pop main_genre_div_child">
+									<a href="#k-pop" class="genre_cont_a"><p class="main_genre_p2">K-POP</p></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -106,10 +117,14 @@
 					<p>SCROLL</p>
 					<i class="fas fa-angle-down scroll_it_arrow"></i>
 				</div>
-        <section class="main_genre_explain genre_explain_hiphop fadein_bf">
+        <section class="main_genre_explain genre_explain_hiphop fadein_bf" id="hiphop">
           <h2 class="main_h2_orange main_genre_h2">HIPHOP</h2>
           <div class="main_genre_youtube">
-            <iframe class="explain_youtube_iframe explain_youtube_hiphop" src="https://www.youtube.com/embed/CVGsO7Kcgq0?loop=1&playlist=CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="yt">
+							<div class="yt_play">
+								<img  class="js-modal-video main_youtube_img" src="https://i.ytimg.com/vi/CVGsO7Kcgq0/mqdefault.jpg" data-video-id="CVGsO7Kcgq0" alt>
+							</div>
+						</div>
           </div>
           <p class="main_genre_explain_p1">
               HIPHOPダンスとはニューヨーク発祥のストリートダンスで、ラップ調の曲に合わせて身体を大きく使って踊ります。
@@ -121,10 +136,14 @@
               ビートに乗って気持ちよく踊りたい人におすすめなジャンルです！</span>
             </p>
         </section>
-        <section class="main_genre_explain genre_explain_krump fadein_bf">
+        <section class="main_genre_explain genre_explain_krump fadein_bf" id="krump">
           <h2 class="main_h2_orange main_genre_h2">KRUMP</h2>
           <div class="main_genre_youtube">
-            <iframe class="explain_youtube_iframe explain_youtube_hiphop" src="https://www.youtube.com/embed/CVGsO7Kcgq0?loop=1&playlist=CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="yt">
+							<div class="yt_play">
+								<img  class="js-modal-video main_youtube_img" src="https://i.ytimg.com/vi/9bbSwRcOk6s/mqdefault.jpg" data-video-id="9bbSwRcOk6s" alt>
+							</div>
+						</div>
           </div>
           <p class="main_genre_explain_p1">
               KRUMPとは、かつての劣悪な治安の中ロサンゼルスの若者達によって生み出されたダンスです。
@@ -136,23 +155,31 @@
               <span class="genre_p_under">自分の中に眠る野生の感情を爆発させたい！！そんな方におすすめのジャンルです。</span>
             </p>
         </section>
-        <section class="main_genre_explain genre_explain_vocaloid fadein_bf">
+        <section class="main_genre_explain genre_explain_vocaloid fadein_bf" id="vocaloid">
           <h2 class="main_h2_orange main_genre_h2">VOCALOID</h2>
           <div class="main_genre_youtube">
-            <iframe class="explain_youtube_iframe explain_youtube_hiphop" src="https://www.youtube.com/embed/CVGsO7Kcgq0?loop=1&playlist=CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="yt">
+							<div class="yt_play">
+								<img  class="js-modal-video main_youtube_img" src="https://i.ytimg.com/vi/rzsWEJBHY6k/mqdefault.jpg" data-video-id="rzsWEJBHY6k" alt>
+							</div>
+						</div>
           </div>
           <p class="main_genre_explain_p1">
               ボーカロイドとは、初音ミクや鏡音リンなどのボーカロイドのキャクターたちの歌う近未来的な
-              曲に合わせて踊る、”踊り手”と呼ばれる人たちの振りを踊るダンスのことを指します。
-              当同好会ではそのボーカロイドの歌う曲に合わせて、カワイイからカッコいいまで幅広い踊ってみたダンスが
-              好きなダンサーさんたちも所属しています！
+              曲（あるいはその曲を歌い手が歌った曲）に合わせて踊る、”踊り手”と呼ばれる人たちの振りを踊るダンスのことを指します。
+              当同好会ではそのボーカロイドの歌う曲に合わせて、カワイイからカッコいいまでいろいろなダンスを踊っています！"踊ってみたダンス"を愛してやまない
+              ダンサーさんたちも活躍しています！
               <span class="genre_p_under">Youtubeやニコニコなどの【踊ってみた】動画の主役、踊り手になってみませんか？</span>
             </p>
         </section>
-        <section class="main_genre_explain genre_explain_idol fadein_bf">
+        <section class="main_genre_explain genre_explain_idol fadein_bf" id="idol">
           <h2 class="main_h2_orange main_genre_h2">IDOL</h2>
           <div class="main_genre_youtube">
-            <iframe class="explain_youtube_iframe explain_youtube_hiphop" src="https://www.youtube.com/embed/CVGsO7Kcgq0?loop=1&playlist=CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="yt">
+							<div class="yt_play">
+								<img  class="js-modal-video main_youtube_img" src="https://i.ytimg.com/vi/RLgipO9GdvE/mqdefault.jpg" data-video-id="RLgipO9GdvE" alt>
+							</div>
+						</div>	
           </div>
           <p class="main_genre_explain_p1">
             アイドルダンスとは、カワイイ衣装に身を包んだアイドルをメインに
@@ -164,10 +191,14 @@
             人気が出れば、ファンが付くかもしれませんね！</span>
             </p>
         </section>
-        <section class="main_genre_explain genre_explain_k-pop fadein_bf">
+        <section class="main_genre_explain genre_explain_k-pop fadein_bf" id="k-pop">
           <h2 class="main_h2_orange main_genre_h2">K-POP</h2>
           <div class="main_genre_youtube">
-            <iframe class="explain_youtube_iframe explain_youtube_hiphop" src="https://www.youtube.com/embed/CVGsO7Kcgq0?loop=1&playlist=CVGsO7Kcgq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<div class="yt">
+							<div class="yt_play">
+								<img  class="js-modal-video main_youtube_img" src="https://i.ytimg.com/vi/go3s3NHzfXw/mqdefault.jpg" data-video-id="go3s3NHzfXw" alt>
+							</div>
+						</div>
           </div>
           <p class="main_genre_explain_p1">
               K-POPダンスとは、韓国のグループのダンスグループの曲に合わせて、
@@ -198,7 +229,7 @@
 								<i class="fab fa-youtube footer_sns_icon"></i>
 						</a></li>
 						<li class="">
-							<a class="sns_insta sns_a" href="#">
+							<a class="sns_insta sns_a" href="https://instagram.com/tnct_largo?igshid=1nckys5xc5xn8">
 								<i class="fab fa-instagram footer_sns_icon"></i>
 						</a></li>
 						<li class="">
